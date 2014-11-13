@@ -7,6 +7,7 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	crypto = require('crypto');
 
+
 /**
  * A Validation function for local strategy properties
  */
@@ -88,7 +89,29 @@ var UserSchema = new Schema({
 	},
 	resetPasswordExpires: {
 		type: Date
+	},
+	/* Address */
+	address: {
+		street_one: {
+			type: String
+		},
+		street_two: {
+			type: String
+		},
+		street_three: {
+			type: String
+		},
+		city: {
+			type: String
+		},
+		state: {
+			type: String
+		},
+		zipcode: {
+			type: Number
+		}
 	}
+
 });
 
 /**
