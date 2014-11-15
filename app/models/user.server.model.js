@@ -22,10 +22,12 @@ var validateLocalStrategyPassword = function(password) {
 	return (this.provider !== 'local' || (password && password.length > 6));
 };
 
+
+
 /**
  * User Schema
  */
-var UserSchema = new Schema({
+  var UserSchema = new Schema({
 	firstName: {
 		type: String,
 		trim: true,
@@ -128,6 +130,52 @@ var UserSchema = new Schema({
 		},
 	},
 
+	usertypes: [{
+		artist: {
+		stage_name:{
+			type:String
+		},
+
+		cell_phone_number:{
+			type:Number
+		},
+
+		years_played :{
+			type:String
+		},
+
+		bio: {
+			type:String
+		},
+		genre:{
+			type:[String]
+		},
+
+		instruments_played: {
+			type:[String]
+		},
+
+		event_fee : {
+			type:Number
+		}
+		/*Enter gigs in a min*/
+	}},
+	{
+	business : {
+		business_name: {
+			type: String
+		},
+		telephone_number: {
+			type: Number
+		},
+		owner_of_bussines : {
+			type:String
+		},
+		description: {
+			type:String
+		}
+	}}],
+
 	/* Artist_Type */
 	artist: {
 		stage_name:{
@@ -164,16 +212,15 @@ var UserSchema = new Schema({
 		business_name: {
 			type: String
 		},
-		telphone_number: {
+		telephone_number: {
 			type: Number
 		},
 		owner_of_bussines : {
 			type:String
 		},
-
-		descritpion: {
+		description: {
 			type:String
-		},		
+		}
 	}
 
 });
