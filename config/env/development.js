@@ -6,9 +6,10 @@ module.exports = {
 		title: 'that-local-sound - Development Environment'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || 'APP_ID',
-		clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
-		callbackURL: '/auth/facebook/callback'
+		clientID: process.env.FACEBOOK_ID || '736847689739746',
+		clientSecret: process.env.FACEBOOK_SECRET || '544ddab6a44db3c76429fa7195f30c3e',
+		//TODO:cannot test on local server. Change when on a live server 
+		callbackURL: 'https://localhost:3000/#!/auth/facebook/callback'
 	},
 	twitter: {
 		clientID: process.env.TWITTER_KEY || 'CONSUMER_KEY',
