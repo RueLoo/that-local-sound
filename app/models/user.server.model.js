@@ -60,6 +60,9 @@ var UserSchema = new Schema({
 		default: '',
 		validate: [validateLocalStrategyPassword, 'Password should be longer']
 	},
+	cell_phone_number:{
+		type:Number
+	},
 	salt: {
 		type: String
 	},
@@ -159,7 +162,7 @@ var UserSchema = new Schema({
 		/*Enter gigs in a min*/
 	},
 
-	/* Bussines */
+	/* Business */
 	business : {
 		business_name: {
 			type: String
@@ -171,9 +174,9 @@ var UserSchema = new Schema({
 			type:String
 		},
 
-		descritpion: {
+		description: {
 			type:String
-		},		
+		},
 	}
 
 });
