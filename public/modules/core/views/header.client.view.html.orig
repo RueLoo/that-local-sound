@@ -7,9 +7,12 @@
 			<span class="icon-bar"></span>
 		</button>
 		<a href="/#!/" class="navbar-brand">that-local-sound</a>
-		<a href="/#!/browse/" class="navbar-brand">Browse</a>
+<<<<<<< HEAD
 		<a href="/#!/dashboard/" class="navbar-brand">Dashboard</a>
 		<a href="/#!/dashboard/profile" class="navbar-brand">Dashboard - Profile</a>
+=======
+		<a href="/#!/browse/" class="navbar-brand">Browse</a>
+>>>>>>> brianbranch
 	</div>
 	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
 		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">

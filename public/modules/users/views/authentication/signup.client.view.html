@@ -1,12 +1,15 @@
 <section class="row" data-ng-controller="AuthenticationController">
-
-	<div class="col-md-12 text-center">
-		<!--Social Netwrok Integration -->
-	</div>
-	<h3 class="col-md-12 text-center">Sign Up with your email</h3>
+	<h3 class="col-md-12 text-center">Sign up with your email</h3>
 	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
 		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
 			<fieldset>
+			<!--Radio buttons for artist/business select -->
+	<!-- 				<div class="form-group">
+	<input type="radio" ng-model="user.artist" value="artist"> Artist
+	<br/>
+	<input type="radio" ng-model="user.business" value="business"> Business
+	<tt>color = {{ | json}}</tt><br/>
+</div> -->
 				<div class="form-group">
 					<label for="firstName">First Name</label>
 					<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
