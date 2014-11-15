@@ -1,0 +1,13 @@
+<section data-ng-controller="DashboardController" data-ng-init="find()">
+  <div class="page-header">
+    <h1>Hello The Names Are</h1>
+  </div>
+  <div class="list-group">
+    <a data-ng-repeat="user in users" class="list-group-item">
+      <p data-ng-bind=""></p>
+    </a>
+  </div>
+  <!-- <div class="alert alert-warning text-center" data-ng-if="articles.\$resolved && !articles.length">
+    No articles yet, why don't you <a href="/#!/articles/create">create one</a>?
+  </div> -->
+</section>

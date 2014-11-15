@@ -46,11 +46,11 @@ angular.module('articles').controller('ArticlesController', ['$scope', '$statePa
 		};
 
 		$scope.find = function() {
-			$scope.articles = Articles.query();
+			$scope.articles = Articles.query();//passes this guy to the html that calls this function
 		};
 
 		$scope.findOne = function() {
-			$scope.article = Articles.get({
+			$scope.article = Articles.get({//this is a .Where function? - yea i'm pretty sure
 				articleId: $stateParams.articleId
 			});
 		};

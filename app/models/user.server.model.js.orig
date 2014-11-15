@@ -22,6 +22,8 @@ var validateLocalStrategyPassword = function(password) {
 	return (this.provider !== 'local' || (password && password.length > 6));
 };
 
+
+
 /**
  * User Schema
  */
@@ -219,9 +221,16 @@ var validateLocalStrategyPassword = function(password) {
 		owner_of_bussines : {
 			type:String
 		},
+<<<<<<< HEAD
+
 		description: {
 			type:String
 		},
+=======
+		description: {
+			type:String
+		}
+>>>>>>> jamesbranch
 	}
 
 });
