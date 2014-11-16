@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/that-local-sound-dev',
+	db: 'mongodb://<james.o.hall87@gmail.com>:<Inn0v4ti0n>@dogen.mongohq.com:10006/app31525786',
 	app: {
 		title: 'that-local-sound - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || '736847689739746',
 		clientSecret: process.env.FACEBOOK_SECRET || '544ddab6a44db3c76429fa7195f30c3e',
-		//TODO:cannot test on local server. Change when on a live server 
+		//TODO:cannot test on local server. Change when on a live server
 		callbackURL: 'https://localhost:3000/#!/auth/facebook/callback'
 	},
 	twitter: {
