@@ -105,41 +105,51 @@ var validateLocalStrategyPassword = function(password) {
 
 	address: {
 		street_one:{
-			type:String
+			type:String,
+			trim:true
 		},
 		street_two:{
-			type:String
+			type:String,
+			trim:true
 		},
 		street_three:{
-			type:String
+			type:String,
+			trime:true
 		},
 		state:{
-			type:String
+			type:String,
+			trim:true
 		},
 		city:{
-			type:String
+			type:String,
+			trim:true
 		},
 		zipcode:{
-			type:String
+			type:String,
+			trim:true
 		}
 	},
 	/* Billing stuff */
 	billing: {
 		first_name_on_card:{
 			type:String,
-			required:'Please enter a First Name'
+			//required:'Please enter a First Name for billing',
+			trim:true
 		},
 		last_name_on_card:{
 			type:String,
-			required:'Please enter a Last Name'
+		//	required:'Please enter a Last Name',
+			trim:true
 		},
 		cvn:{
 			type:Number,
-			required:'Please enter the cvn number on the credit card'
+		//	required:'Please enter the cvn number on the credit card',
+			trim:true
 		},
 		card_number:{
 			type:Number,
-			required:'Please enter the credit card number'
+	//		required:'Please enter the credit card number',
+			trim:true
 		}
 	},
 	/*contians artist and bussines types*/
@@ -147,33 +157,42 @@ var validateLocalStrategyPassword = function(password) {
 	{
 		artist:{
 			stageName:{
-				type:String
+				type:String,
+				trim:true
 			},
 			yearsPlayed:{
-				type:Number
+				type:Number,
+				trim:true
 			},
 			genre:{
-				type:[String]
+				type:[String],
+				trim:true
 			},
 			instrumentsPlayed:{
-				type:[String]
+				type:[String],
+				trim:true
 			},
 			bio:{
-				type:String
+				type:String,
+				trim:true
 			},
 			pricePerGig:{
-				type:Number
+				type:Number,
+				trim:true
 			}
 		}}, {
 		bussiness:{
 			nameOfBussiness:{
-				type:String
+				type:String,
+				trim:true
 			},
 			descriptionOfBussines:{
-				type:String
+				type:String,
+				trim:true
 			},
 			ownerOfBussiness:{
-				type:String
+				type:String,
+				trim:true
 	 }}}],
 	/*end userTypes */
 	requests:[{
