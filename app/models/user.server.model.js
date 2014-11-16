@@ -49,6 +49,7 @@ var validateLocalStrategyPassword = function(password) {
 		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
 		match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
+	//username is different depending on usertype.
 	username: {
 		type: String,
 		unique: 'testing error message',
@@ -63,15 +64,20 @@ var validateLocalStrategyPassword = function(password) {
 	cell_phone_number:{
 		type:Number
 	},
+	// what is salt for?
 	salt: {
 		type: String
 	},
+	// what is provide for?
 	provider: {
 		type: String,
 		required: 'Provider is required'
 	},
+	// what is provider data for?
 	providerData: {},
+
 	additionalProvidersData: {},
+	// I kinda see how this would work.
 	roles: {
 		type: [{
 			type: String,
@@ -85,8 +91,118 @@ var validateLocalStrategyPassword = function(password) {
 	created: {
 		type: Date,
 		default: Date.now
-	}
+	},
+	/* For reset password */
+	resetPasswordToken: {
+		type: String
+	},
+	resetPasswordExpires: {
+		type: Date
+	},
+	/* Address */
+	// not required when the user logs in, but required when search is being used.
+	// need to alert user at somepoint to add adress
+
+	address: {
+		street_one:{
+			type:String
+		},
+		street_two:{
+			type:String
+		},
+		street_three:{
+			type:String
+		},
+		state:{
+			type:String
+		},
+		city:{
+			type:String
+		},
+		zipcode:{
+			type:String
+		}
+	},
+	/* Billing stuff */
+	billing: {
+		first_name_on_card:{
+			type:String,
+			required:'Please enter a First Name'
+		},
+		last_name_on_card:{
+			type:String,
+			required:'Please enter a Last Name'
+		},
+		cvn:{
+			type:Number,
+			required:'Please enter the cvn number on the credit card'
+		},
+		card_number:{
+			type:Number,
+			required:'Please enter the credit card number'
+		}
+	},
 	/*contians artist and bussines types*/
+	userType:[
+	{
+		artist:{
+			stageName:{
+				type:String
+			},
+			yearsPlayed:{
+				type:Number
+			},
+			genre:{
+				type:[String]
+			},
+			instrumentsPlayed:{
+				type:[String]
+			},
+			bio:{
+				type:String
+			},
+			pricePerGig:{
+				type:Number
+			}
+		}}, {
+		bussiness:{
+			nameOfBussiness:{
+				type:String
+			},
+			descriptionOfBussines:{
+				type:String
+			},
+			ownerOfBussiness:{
+				type:String
+	 }}}],
+	/*end userTypes */
+			requests:[{
+				dateCreated:{
+					type:Date.now
+				},
+				dateOfGig:{
+					type:Date
+				},
+				startTimeOfGig:{
+					type:Date
+				},
+				endTimeOfGig:{
+					type:Date
+				},
+				received:{
+					type:Boolean
+				},
+				accepted:{
+					type:Boolean
+				},
+				amountForGig:{
+					type:Number
+				},
+				// not sure how to do artistID
+				artistID:{
+					type:Number
+				}
+			}]
 });
 
 /**
