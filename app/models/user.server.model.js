@@ -178,7 +178,8 @@ var validateLocalStrategyPassword = function(password) {
 	/*end userTypes */
 	requests:[{
 		dateCreated:{
-			type:Date.now
+			type:Date,
+			default:Date.now
 			},
 			dateOfGig:{
 			type:Date
