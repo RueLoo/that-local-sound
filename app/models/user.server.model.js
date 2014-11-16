@@ -176,33 +176,32 @@ var validateLocalStrategyPassword = function(password) {
 				type:String
 	 }}}],
 	/*end userTypes */
-			requests:[{
-				dateCreated:{
-					type:Date.now
-				},
-				dateOfGig:{
-					type:Date
-				},
-				startTimeOfGig:{
-					type:Date
-				},
-				endTimeOfGig:{
-					type:Date
-				},
-				received:{
-					type:Boolean
-				},
-				accepted:{
-					type:Boolean
-				},
-				amountForGig:{
-					type:Number
-				},
+	requests:[{
+		dateCreated:{
+			type:Date.now
+			},
+			dateOfGig:{
+			type:Date
+			},
+			startTimeOfGig:{
+				type:Date
+			},
+			endTimeOfGig:{
+				type:Date
+			},
+			received:{
+				type:Boolean
+			},
+			accepted:{
+				type:Boolean
+			},
+			amountForGig:{
+				type:Number
+			},
 				// not sure how to do artistID
-				artistID:{
-					type:Number
-				}
-			}]
+			artistID:{
+				type:Number
+			}}]
 });
 
 /**
