@@ -15,6 +15,14 @@ angular.module('dashboard').config(['$stateProvider', '$urlRouterProvider',
     state('dashboardProfile', {//just serving as a pointer for the URL ahref link - YES
       url: '/dashboard/profile',
       templateUrl: 'modules/dashboard/views/profile.client.view.html'
+    }).
+    state('dashboardInbox', {//just serving as a pointer for the URL ahref link - YES
+      url: '/dashboard/inbox',
+      templateUrl: 'modules/dashboard/views/inbox.client.view.html'
+    }).
+    state('dashboardRequest', {//just serving as a pointer for the URL ahref link - YES
+      url: '/dashboard/request',
+      templateUrl: 'modules/dashboard/views/request.client.view.html'
     });
   }
 ]);

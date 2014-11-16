@@ -1,0 +1,18 @@
+<section class="row" data-ng-controller="AuthenticationController">
+	<h1>Inbox</h1>
+		<form name="userForm" data-ng-submit="" novalidate autocomplete="off">
+			<fieldset>
+				<div class="form-group">
+					<label for="Name">To</label>
+					<input type="text" required id="Name" size="35" name="Name" class="form-control" align="left" data-ng-model="" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<label for="email">Message</label>
+					<textarea class="form-control" style="border:1px solid lightgray;border-radius:3px;" cols="50" rows="4" name="comment"></textarea>
+				</div>
+				<div class="text-left form-group">
+					<button type="submit" class="btn btn-large btn-primary">Send</button>
+				</div>
+			</fieldset>
+		</form>
+</section>
