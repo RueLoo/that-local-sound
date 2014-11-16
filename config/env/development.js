@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://<james.o.hall87@gmail.com>:<Inn0v4ti0n>@dogen.mongohq.com:10006/app31525786',
+	db: 'mongodb://heroku:vHJ_e9nG2vty-g_a797Cfr3lbjNG2ejJjr0RBwdeqn51sB9gM_joKqNgeT0WKC4qTYJrlsuyp3QdS3bssOzWng@dogen.mongohq.com:10006/app31655276',
 	app: {
 		title: 'that-local-sound - Development Environment'
 	},
