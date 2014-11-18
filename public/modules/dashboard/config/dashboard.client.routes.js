@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('dashboard.client.routes.js'+' loaded');
 // Setting up route
 angular.module('dashboard').config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {

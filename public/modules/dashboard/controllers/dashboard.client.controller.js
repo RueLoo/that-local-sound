@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('dashboard.client.controller.js'+' loaded');
 angular.module('dashboard').controller('DashboardController', ['$scope', '$stateParams', '$location', 'Authentication', 'User',
   function($scope, $stateParams, $location, Authentication, User) {
     $scope.authentication = Authentication;

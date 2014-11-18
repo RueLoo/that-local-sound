@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('header.client.controller.test.js'+' loaded');
 (function() {
 	describe('HeaderController', function() {
 		//Initialize global variables
