@@ -4,6 +4,8 @@
 angular.module('users').config(['$stateProvider',
 	function($stateProvider) {
 		// Users state routing
+		// going to try and put the dashboard controller here,
+		// my thought is that it is connect the use class, so all it needs is the user.
 		$stateProvider.
 		state('profile', {
 			url: '/settings/profile',
