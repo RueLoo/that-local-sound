@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('menus.client.service.js'+' loaded');
 //Menu service used for managing  menus
 angular.module('core').service('Menus', [
 
@@ -10,7 +10,7 @@ angular.module('core').service('Menus', [
 		// Define the menus object
 		this.menus = {};
 
-		// A private function for rendering decision 
+		// A private function for rendering decision
 		var shouldRender = function(user) {
 			if (user) {
 				if (!!~this.roles.indexOf('*')) {

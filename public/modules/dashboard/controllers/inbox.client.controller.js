@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('index.client.controller.js'+' loaded');
 angular.module('inbox').controller('InboxController', ['$scope', '$stateParams', '$location', 'Authentication', 'Inbox',
 	function($scope, $stateParams, $location, Authentication, Inbox) {
 		$scope.authentication = Authentication;

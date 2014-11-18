@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('authentication.client.controller.test.js'+' loaded');
 (function() {
 	// Authentication controller Spec
 	describe('AuthenticationController', function() {

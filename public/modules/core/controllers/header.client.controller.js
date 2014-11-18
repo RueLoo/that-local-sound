@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('header.client.controller.js'+' loaded');
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
 	function($scope, Authentication, Menus) {
 		$scope.authentication = Authentication;
