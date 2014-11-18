@@ -3,9 +3,16 @@
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
 	function($scope, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
+		$scope.user = '';
 
 		// If user is signed in then redirect back home
 		if ($scope.authentication.user) $location.path('/');
+
+		$scope.isShown = function(user){
+			return user === $scope.user;
+		};
+		// Default form shown is artist
+		$scope.user = 'Artist';
 
 		$scope.signup = function() {
 			//creating a change in the file.
