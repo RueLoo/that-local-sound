@@ -117,19 +117,19 @@ var UserSchema = new Schema({
 	billing: {
 		first_name_on_card:{
 			type:String,
-			required:'Please enter a First Name'
+		//	required:'Please enter a First Name'
 		},
 		last_name_on_card:{
 			type:String,
-			required:'Please enter a Last Name'
+		//	required:'Please enter a Last Name'
 		},
 		cvn:{
 			type:Number,
-			required:'Please enter the cvn number on the credit card'
+		//	required:'Please enter the cvn number on the credit card'
 		},
 		card_number:{
 			type:Number,
-			required:'Please enter the credit card number'
+			//required:'Please enter the credit card number'
 		}
 	},
 	/*contians artist and bussines types*/
