@@ -7,7 +7,6 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	crypto = require('crypto');
 
-
 /**
  * A Validation function for local strategy properties
  */
@@ -25,8 +24,9 @@ var validateLocalStrategyPassword = function(password) {
 /**
  * User Schema
  */
-  var UserSchema = new Schema({
-	firstName: {type: String,
+var UserSchema = new Schema({
+	firstName: {
+		type: String,
 		trim: true,
 		default: '',
 		validate: [validateLocalStrategyProperty, 'Please fill in your first name']
@@ -48,7 +48,6 @@ var validateLocalStrategyPassword = function(password) {
 		validate: [validateLocalStrategyProperty, 'Please fill in your email'],
 		match: [/.+\@.+\..+/, 'Please fill a valid email address']
 	},
-	//username is different depending on usertype.
 	username: {
 		type: String,
 		unique: 'testing error message',
@@ -60,23 +59,15 @@ var validateLocalStrategyPassword = function(password) {
 		default: '',
 		validate: [validateLocalStrategyPassword, 'Password should be longer']
 	},
-	cell_phone_number:{
-		type:Number
-	},
-	// what is salt for?
 	salt: {
 		type: String
 	},
-	// what is provide for?
 	provider: {
 		type: String,
 		required: 'Provider is required'
 	},
-	// what is provider data for?
 	providerData: {},
-
 	additionalProvidersData: {},
-	// I kinda see how this would work.
 	roles: {
 		type: [{
 			type: String,
@@ -126,19 +117,19 @@ var validateLocalStrategyPassword = function(password) {
 	billing: {
 		first_name_on_card:{
 			type:String,
-			required:'Please enter a First Name'
+		//	required:'Please enter a First Name'
 		},
 		last_name_on_card:{
 			type:String,
-			required:'Please enter a Last Name'
+		//	required:'Please enter a Last Name'
 		},
 		cvn:{
 			type:Number,
-			required:'Please enter the cvn number on the credit card'
+		//	required:'Please enter the cvn number on the credit card'
 		},
 		card_number:{
 			type:Number,
-			required:'Please enter the credit card number'
+			//required:'Please enter the credit card number'
 		}
 	},
 	/*contians artist and bussines types*/
@@ -173,35 +164,7 @@ var validateLocalStrategyPassword = function(password) {
 			},
 			ownerOfBussiness:{
 				type:String
-	 }}}],
-	/*end userTypes */
-	requests:[{
-		dateCreated:{
-			type:Date,
-			default:Date.now
-			},
-			dateOfGig:{
-			type:Date
-			},
-			startTimeOfGig:{
-				type:Date
-			},
-			endTimeOfGig:{
-				type:Date
-			},
-			received:{
-				type:Boolean
-			},
-			accepted:{
-				type:Boolean
-			},
-			amountForGig:{
-				type:Number
-			},
-				// not sure how to do artistID
-			artistID:{
-				type:Number
-			}}]
+	 }}}]
 });
 
 /**
