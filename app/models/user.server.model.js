@@ -165,6 +165,7 @@ var UserSchema = new Schema({
 			ownerOfBussiness:{
 				type:String
 	 }}}],
+	//TODO: ask jake how to query the database correctly.
 	/*end userTypes */
 	requests:[{
 		dateCreated:{
