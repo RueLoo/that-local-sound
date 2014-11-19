@@ -7,7 +7,6 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	crypto = require('crypto');
 
-
 /**
  * A Validation function for local strategy properties
  */
@@ -25,7 +24,6 @@ var validateLocalStrategyPassword = function(password) {
 /**
  * User Schema
  */
-  var UserSchema = new Schema({
 	firstName: {
 		type: String,
 		trim: true,
@@ -133,23 +131,19 @@ var validateLocalStrategyPassword = function(password) {
 	billing: {
 		first_name_on_card:{
 			type:String,
-			//required:'Please enter a First Name for billing',
-			trim:true
+		//	required:'Please enter a First Name'
 		},
 		last_name_on_card:{
 			type:String,
-		//	required:'Please enter a Last Name',
-			trim:true
+		//	required:'Please enter a Last Name'
 		},
 		cvn:{
 			type:Number,
-		//	required:'Please enter the cvn number on the credit card',
-			trim:true
+		//	required:'Please enter the cvn number on the credit card'
 		},
 		card_number:{
 			type:Number,
-	//		required:'Please enter the credit card number',
-			trim:true
+			//required:'Please enter the credit card number'
 		}
 	},
 	/*contians artist and bussines types*/
@@ -157,71 +151,34 @@ var validateLocalStrategyPassword = function(password) {
 	{
 		artist:{
 			stageName:{
-				type:String,
-				trim:true
+				type:String
 			},
 			yearsPlayed:{
-				type:Number,
-				trim:true
+				type:Number
 			},
 			genre:{
-				type:[String],
-				trim:true
+				type:[String]
 			},
 			instrumentsPlayed:{
-				type:[String],
-				trim:true
+				type:[String]
 			},
 			bio:{
-				type:String,
-				trim:true
+				type:String
 			},
 			pricePerGig:{
-				type:Number,
-				trim:true
+				type:Number
 			}
 		}}, {
 		bussiness:{
 			nameOfBussiness:{
-				type:String,
-				trim:true
+				type:String
 			},
 			descriptionOfBussines:{
-				type:String,
-				trim:true
+				type:String
 			},
 			ownerOfBussiness:{
-				type:String,
-				trim:true
-	 }}}],
-	/*end userTypes */
-	requests:[{
-		dateCreated:{
-			type:Date,
-			default:Date.now
-			},
-			dateOfGig:{
-			type:Date
-			},
-			startTimeOfGig:{
-				type:Date
-			},
-			endTimeOfGig:{
-				type:Date
-			},
-			received:{
-				type:Boolean
-			},
-			accepted:{
-				type:Boolean
-			},
-			amountForGig:{
-				type:Number
-			},
-				// not sure how to do artistID
-			artistID:{
-				type:Number
-			}}]
+				type:String
+	 }}}]
 });
 
 /**

@@ -7,7 +7,6 @@ var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	crypto = require('crypto');
 
-
 /**
  * A Validation function for local strategy properties
  */
@@ -22,12 +21,10 @@ var validateLocalStrategyPassword = function(password) {
 	return (this.provider !== 'local' || (password && password.length > 6));
 };
 
-
-
 /**
  * User Schema
  */
-  var UserSchema = new Schema({
+var UserSchema = new Schema({
 	firstName: {
 		type: String,
 		trim: true,
@@ -62,9 +59,6 @@ var validateLocalStrategyPassword = function(password) {
 		default: '',
 		validate: [validateLocalStrategyPassword, 'Password should be longer']
 	},
-	cell_phone_number:{
-		type:Number
-	},
 	salt: {
 		type: String
 	},
@@ -96,143 +90,149 @@ var validateLocalStrategyPassword = function(password) {
 		type: Date
 	},
 	/* Address */
+	// not required when the user logs in, but required when search is being used.
+	// need to alert user at somepoint to add adress
+
 	address: {
-		street_one: {
-			type: String
+		street_one:{
+			type:String,
+			trim:true
 		},
-		street_two: {
-			type: String
+		street_two:{
+			type:String,
+			trim:true
 		},
-		street_three: {
-			type: String
+		street_three:{
+			type:String,
+			trime:true
 		},
-		city: {
-			type: String
+		state:{
+			type:String,
+			trim:true
 		},
-		state: {
-			type: String
+		city:{
+			type:String,
+			trim:true
 		},
-		zipcode: {
-			type: Number
+		zipcode:{
+			type:String,
+			trim:true
 		}
 	},
-	age: {
-		type: Number
-	},
-
 	/* Billing stuff */
-	billing_info: {
-		credit_card:{
-			type:String
-		},
-		cvn :{
-			type:Number
-		},
-		zipcode :{
-			type:Number
-		},
-	},
-
-	usertypes: [{
-		artist: {
-		stage_name:{
-			type:String
-		},
-
-		cell_phone_number:{
-			type:Number
-		},
-
-		years_played :{
-			type:String
-		},
-
-		bio: {
-			type:String
-		},
-		genre:{
-			type:[String]
-		},
-
-		instruments_played: {
-			type:[String]
-		},
-
-		event_fee : {
-			type:Number
-		}
-		/*Enter gigs in a min*/
-	}},
-	{
-	business : {
-		business_name: {
-			type: String
-		},
-		telephone_number: {
-			type: Number
-		},
-		owner_of_bussines : {
-			type:String
-		},
-		description: {
-			type:String
-		}
-	}}],
-
-	/* Artist_Type */
-	artist: {
-		stage_name:{
-			type:String
-		},
-
-		cell_phone_number:{
-			type:Number
-		},
-
-		years_played :{
-			type:String
-		},
-
-		bio: {
-			type:String
-		},
-		genre:{
-			type:[String]
-		},
-
-		instruments_played: {
-			type:[String]
-		},
-
-		event_fee : {
-			type:Number
-		}
-		/*Enter gigs in a min*/
-	},
-
-	/* Business */
-	business : {
-		business_name: {
-			type: String
-		},
-		telephone_number: {
-			type: Number
-		},
-		owner_of_bussines : {
-			type:String
-		},
+	billing: {
+		first_name_on_card:{
+			type:String,
 <<<<<<< HEAD
-
-		description: {
-			type:String
+			//required:'Please enter a First Name for billing',
+			trim:true
 		},
+		last_name_on_card:{
+			type:String,
+		//	required:'Please enter a Last Name',
+			trim:true
+		},
+		cvn:{
+			type:Number,
+		//	required:'Please enter the cvn number on the credit card',
+			trim:true
+		},
+		card_number:{
+			type:Number,
+	//		required:'Please enter the credit card number',
+			trim:true
 =======
-		description: {
-			type:String
-		}
+		//	required:'Please enter a First Name'
+		},
+		last_name_on_card:{
+			type:String,
+		//	required:'Please enter a Last Name'
+		},
+		cvn:{
+			type:Number,
+		//	required:'Please enter the cvn number on the credit card'
+		},
+		card_number:{
+			type:Number,
+			//required:'Please enter the credit card number'
 >>>>>>> jamesbranch
-	}
-
+		}
+	},
+	/*contians artist and bussines types*/
+	userType:[
+	{
+		artist:{
+			stageName:{
+				type:String,
+				trim:true
+			},
+			yearsPlayed:{
+				type:Number,
+				trim:true
+			},
+			genre:{
+				type:[String],
+				trim:true
+			},
+			instrumentsPlayed:{
+				type:[String],
+				trim:true
+			},
+			bio:{
+				type:String,
+				trim:true
+			},
+			pricePerGig:{
+				type:Number,
+				trim:true
+			}
+		}}, {
+		bussiness:{
+			nameOfBussiness:{
+				type:String,
+				trim:true
+			},
+			descriptionOfBussines:{
+				type:String,
+				trim:true
+			},
+			ownerOfBussiness:{
+<<<<<<< HEAD
+				type:String,
+				trim:true
+	 }}}],
+	/*end userTypes */
+	requests:[{
+		dateCreated:{
+			type:Date,
+			default:Date.now
+			},
+			dateOfGig:{
+			type:Date
+			},
+			startTimeOfGig:{
+				type:Date
+			},
+			endTimeOfGig:{
+				type:Date
+			},
+			received:{
+				type:Boolean
+			},
+			accepted:{
+				type:Boolean
+			},
+			amountForGig:{
+				type:Number
+			},
+				// not sure how to do artistID
+			artistID:{
+				type:Number
+			}}]
+=======
+				type:String
+	 }}}]
+>>>>>>> jamesbranch
 });
 
 /**

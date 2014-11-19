@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('articles.client.controller.test.js'+' loaded');
 (function() {
 	// Articles Controller Spec
 	describe('ArticlesController', function() {

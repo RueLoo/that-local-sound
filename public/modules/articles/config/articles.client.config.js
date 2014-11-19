@@ -1,4 +1,5 @@
 'use strict';
+console.log('articles.client.config.js'+' loaded');
 
 // Configuring the Articles module
 angular.module('articles').run(['Menus',

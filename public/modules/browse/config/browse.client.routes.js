@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('browse.client.routes.js'+' loaded');
 // Setting up route
 angular.module('browse').config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {

@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('home.client.controller.test.js'+' loaded');
 (function() {
 	describe('HomeController', function() {
 		//Initialize global variables

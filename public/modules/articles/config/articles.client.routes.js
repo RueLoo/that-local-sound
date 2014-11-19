@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('articles.client.routes.js'+' loaded');
 // Setting up route
 angular.module('articles').config(['$stateProvider',
 	function($stateProvider) {
