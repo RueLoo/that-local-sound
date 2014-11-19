@@ -3,54 +3,49 @@
 /**
  * Module dependencies.
  */
-var _ = require('lodash'),
-	errorHandler = require('../errors.server.controller.js'),
-	mongoose = require('mongoose'),
-	passport = require('passport'),
-	User = mongoose.model('User');
+var mongoose = require('mongoose'),
+  errorHandler = require('../errors.server.controller'),
+  User = mongoose.model('User'),
+  _ = require('lodash');
+
 
 /**
- * Update user details
+ * List of Users
  */
-exports.update = function(req, res) {
-	// Init Variables
-	var user = req.user;
-	var message = null;
-
-	// For security measurement we remove the roles from the req.body object
-	delete req.body.roles;
-
-	if (user) {
-		// Merge existing user
-		user = _.extend(user, req.body);
-		user.updated = Date.now();
-		user.displayName = user.firstName + ' ' + user.lastName;
-
-		user.save(function(err) {
-			if (err) {
-				return res.status(400).send({
-					message: errorHandler.getErrorMessage(err)
-				});
-			} else {
-				req.login(user, function(err) {
-					if (err) {
-						res.status(400).send(err);
-					} else {
-						res.json(user);
-					}
-				});
-			}
-		});
-	} else {
-		res.status(400).send({
-			message: 'User is not signed in'
-		});
-	}
+exports.list = function(req, res) {
+ User.find().exec(function(err, user) {// research this line
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      res.json(user);
+    }
+  });
 };
+
 
 /**
- * Send User
+ * User middleware
  */
-exports.me = function(req, res) {
-	res.json(req.user || null);
-};
+ exports.userById = function(req, res, next, id) {
+   User.findById(id).populate('user', 'displayName').exec(function(err, gigrequest) {
+     if (err) return next(err);
+     if (!gigrequest) return next(new Error('Failed to load article ' + id));
+     req.gigrequest = gigrequest;
+     next();
+   });
+ };
+
+ /**
+  * Article authorization middleware
+  */
+ exports.hasAuthorization = function(req, res, next) {
+   if (req.article.user.id !== req.user.id) {
+     return res.status(403).send({
+       message: 'User is not authorized'
+     });
+   }
+   next();
+
+ };
