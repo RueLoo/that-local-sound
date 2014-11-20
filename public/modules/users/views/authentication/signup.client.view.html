@@ -10,24 +10,24 @@
 	<input type="radio" ng-model="user.business" value="business"> Business
 	<tt>color = {{ | json}}</tt><br/>
 </div> -->
-				<label>Are you an Artist or a Business?</label>
-				<div class="form-group">
-					<div class="radio">
-						<label>
-							<input type="radio" name="user" value="Artist" ng-model="user">
-							Artist
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="user" value="Business" ng-model="user">
-							Business
-						</label>
-					</div>
+			<!-- 	<label>Are you an Artist or a Business?</label>
+			<div class="form-group">
+				<div class="radio">
+					<label>
+						<input type="radio" name="user" value="Artist" ng-model="user">
+						Artist
+					</label>
 				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="user" value="Business" ng-model="user">
+						Business
+					</label>
+				</div>
+			</div> -->
 
 				<!-- Show artist sign up form -->
-				<div ng-show="isShown('Artist')">
+				<!-- <div ng-show="isShown('Artist')"> -->
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -46,8 +46,8 @@
 						<input type="email" id="email" name="email" class="form-control" data-ng-model="credentials.email" placeholder="Email">
 					</div>
 					<div class="form-group">
-						<label for="userType.[artist.stagename]">Stage Name</label>
-						<input type="text" id="userType.[artist.stagename]" name="userType.[artist.stagename]" class="form-control" data-ng-model="credentials.userType.[artist.stagename]" placeholder="Stage Name">
+						<label for="stageName">Stage Name</label>
+						<input type="text" id="stageName" name="stageName" class="form-control" data-ng-model="credentials.stageName" placeholder="Stage Name">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
@@ -63,7 +63,7 @@
 				</div>
 
 				<!-- Show business sign up form -->
-				<div ng-show="isShown('Business')">
+				<!-- <div ng-show="isShown('Business')">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -101,8 +101,8 @@
 						<a href="/#!/signin" class="show-signup">Sign in</a>
 					</div>
 					<div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong>
-					</div>
+						<strong data-ng-bind="error"></strong> -->
+					<!-- </div> -->
 				</div>
 			</fieldset>
 		</form>

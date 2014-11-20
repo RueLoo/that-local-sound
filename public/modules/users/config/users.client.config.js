@@ -1,5 +1,4 @@
 'use strict';
-console.log('users.client.config.js'+' loaded');
 // Config HTTP Error Handling
 angular.module('users').config(['$httpProvider',
 	function($httpProvider) {

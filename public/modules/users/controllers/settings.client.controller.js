@@ -1,5 +1,4 @@
 'use strict';
-console.log('settings.client.controller.js'+' loaded');
 angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
 	function($scope, $http, $location, Users, Authentication) {
 		$scope.user = Authentication.user;

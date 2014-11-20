@@ -125,9 +125,11 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 				return done(err);
 			} else {
 				if (!user) {
+					// edit this to change login form.
 					var possibleUsername = providerUserProfile.username || ((providerUserProfile.email) ? providerUserProfile.email.split('@')[0] : '');
 
 					User.findUniqueUsername(possibleUsername, null, function(availableUsername) {
+						// connects to mongoose model here.
 						user = new User({
 							firstName: providerUserProfile.firstName,
 							lastName: providerUserProfile.lastName,
@@ -135,9 +137,23 @@ exports.saveOAuthUserProfile = function(req, providerUserProfile, done) {
 							displayName: providerUserProfile.displayName,
 							email: providerUserProfile.email,
 							provider: providerUserProfile.provider,
-							providerData: providerUserProfile.providerData
+							providerData: providerUserProfile.providerData,
+							stageName: providerUserProfile.providerData,
+							street_one: providerUserProfile.providerData,
+							street_two: providerUserProfile.providerData,
+							street_three: providerUserProfile.providerData,
+							state: providerUserProfile.providerData,
+							city: providerUserProfile.providerData,
+							zipcode: providerUserProfile.providerData,
+							yearsPlayed: providerUserProfile.providerData,
+							genre: providerUserProfile.providerData,
+							instrumentsPlayed: providerUserProfile.providerData,
+							bio: providerUserProfile.providerData,
+							pricePerGig: providerUserProfile.providerData,
+							nameOfBussiness: providerUserProfile.providerData,
+							descriptionOfBussiness: providerUserProfile.providerData,
+							ownerOfBussiness: providerUserProfile.providerData,
 						});
-
 						// And save the user
 						user.save(function(err) {
 							return done(err, user);

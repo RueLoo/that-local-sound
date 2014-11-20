@@ -71,7 +71,7 @@ var UserSchema = new Schema({
 	roles: {
 		type: [{
 			type: String,
-			enum: ['user', 'admin']
+			enum: ['user', 'artist', 'bussiness']
 		}],
 		default: ['user']
 	},
@@ -92,108 +92,114 @@ var UserSchema = new Schema({
 	/* Address */
 	// not required when the user logs in, but required when search is being used.
 	// need to alert user at somepoint to add adress
+ street_one:{
+ 	type:String,
+ 	default: ''
+ },
+ street_two:{
+ 	type:String,
+ 	default: ''
+ },
+ street_three:{
+ 	type:String,
+ 	default: ''
+ },
+ state:{
+ 	type:String
+ },
+ city:{
+ 	type:String,
+ 	default: ''
+ },
+ zipcode:{
+ 	type:String,
+ 	default: ''
+ },
+	 /* Billing stuff */
+	// billing: {
+	// 	first_name_on_card:{
+	// 		type:String,
+	// 	//	required:'Please enter a First Name'
+	// 	},
+	// 	last_name_on_card:{
+	// 		type:String,
+	// 	//	required:'Please enter a Last Name'
+	// 	},
+	// 	cvn:{
+	// 		type:Number,
+	// 	//	required:'Please enter the cvn number on the credit card'
+	// 	},
+	// 	card_number:{
+	// 		type:Number,
+	// 		//required:'Please enter the credit card number'
+	// 	}
+	// },
+	stageName:{
+		type:String,
+		default: ''
+	},
+	 yearsPlayed:{
+	 	type:Number,
+		default:0
+	 },
+	 genre:{
+	 	type:[String],
+		default: '',
+	 },
+	 instrumentsPlayed:{
+	 	type:[String],
+		default: '',
+	 },
+	 bio:{
+	 	type:String,
+		default: ''
+ },
+	 pricePerGig:{
+	 	type:Number
+	 },
+	nameOfBussiness:{
+  	type:String,
+			default: ''
+	 },
+	 descriptionOfBussines:{
+	 	type:String
+	 },
+	 ownerOfBussiness:{
+	 	type:String
+	 }
 
-	address: {
-		street_one:{
-			type:String
-		},
-		street_two:{
-			type:String
-		},
-		street_three:{
-			type:String
-		},
-		state:{
-			type:String
-		},
-		city:{
-			type:String
-		},
-		zipcode:{
-			type:String
-		}
-	},
-	/* Billing stuff */
-	billing: {
-		first_name_on_card:{
-			type:String,
-		//	required:'Please enter a First Name'
-		},
-		last_name_on_card:{
-			type:String,
-		//	required:'Please enter a Last Name'
-		},
-		cvn:{
-			type:Number,
-		//	required:'Please enter the cvn number on the credit card'
-		},
-		card_number:{
-			type:Number,
-			//required:'Please enter the credit card number'
-		}
-	},
 	/*contians artist and bussines types*/
-	userType:[
-	{
-		artist:{
-			stageName:{
-				type:String
-			},
-			yearsPlayed:{
-				type:Number
-			},
-			genre:{
-				type:[String]
-			},
-			instrumentsPlayed:{
-				type:[String]
-			},
-			bio:{
-				type:String
-			},
-			pricePerGig:{
-				type:Number
-			}
-		}}, {
-		bussiness:{
-			nameOfBussiness:{
-				type:String
-			},
-			descriptionOfBussines:{
-				type:String
-			},
-			ownerOfBussiness:{
-				type:String
-	 }}}],
+
 	//TODO: ask jake how to query the database correctly.
 	/*end userTypes */
-	requests:[{
-		dateCreated:{
-			type:Date,
-			default:Date.now
-			},
-			dateOfGig:{
-			type:Date
-			},
-			startTimeOfGig:{
-				type:Date
-			},
-			endTimeOfGig:{
-				type:Date
-			},
-			received:{
-				type:Boolean
-			},
-			accepted:{
-				type:Boolean
-			},
-			amountForGig:{
-				type:Number
-			},
-				// not sure how to do artistID
-			artistID:{
-				type:Number
-			}}]
+	// requests:[{
+	// 	dateCreated:{
+	// 		type:Date,
+	// 		default:Date.now
+	// 		},
+	// 		dateOfGig:{
+	// 		type:Date
+	// 		},
+	// 		startTimeOfGig:{
+	// 			type:Date
+	// 		},
+	// 		endTimeOfGig:{
+	// 			type:Date
+	// 		},
+	//
+	// 		received:{
+	// 			type:Boolean
+	// 		},
+	// 		accepted:{
+	// 			type:Boolean
+	// 		},
+	// 		amountForGig:{
+	// 			type:Number
+	// 		},
+	// 			// not sure how to do artistID
+	// 		artistID:{
+	// 			type:Number
+	// 		}}]
 });
 
 

@@ -1,5 +1,4 @@
 'use strict';
-console.log('authentication.client.controller.js'+' loaded');
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
 	function($scope, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
@@ -12,7 +11,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 			return user === $scope.user;
 		};
 		// Default form shown is artist
-		$scope.user = 'Artist';
+		$scope.user = 'User';
 
 		$scope.signup = function() {
 			//creating a change in the file.
