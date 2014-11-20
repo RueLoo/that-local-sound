@@ -5,14 +5,16 @@
   </div>
   <div class="list-group">
     <a data-ng-repeat="user in users" data-ng-href="#!/users/" class="list-group-item">
-      <small class="list-group-item-text">
-
-        <!-- <span data-ng-bind="user.created | date:'mediumDate'"></span> -->
-
-        <span data-ng-bind="user.stageName"></span>
-      </small>
-      <h4 class="list-group-item-heading" data-ng-bind="user.email"></h4>
-      <h5 class="list-grou-item-heading" data-ng-bind="user.stageName"></h4>
+      <div>
+        <img src="http://placehold.it/70x70" class="avatar img-circle" alt="avatar">
+        <p>Signed up:
+          <span data-ng-bind="user.created | date:'mediumDate'"></span>
+        </p>
+      </div>
+      <div>
+        <h4 class="list-group-item-heading" data-ng-bind="user.email"></h4>
+        <h5 class="list-group-item-heading" data-ng-bind="user.stageName"></h4>
+      </div>
     </a>
   </div>
 </section>
