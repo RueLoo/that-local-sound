@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
  * List of Users
  */
 exports.list = function(req, res) {
- User.find().exec(function(err, user) {// research this line
+ User.find().populate('user', 'displayName').exec(function(err, user) {// research this line
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -38,15 +38,15 @@ exports.list = function(req, res) {
    });
  };
 
- /**
-  * Article authorization middleware
-  */
- exports.hasAuthorization = function(req, res, next) {
-   if (req.article.user.id !== req.user.id) {
-     return res.status(403).send({
-       message: 'User is not authorized'
-     });
-   }
-   next();
-
- };
+ // /**
+ //  * Article authorization middleware
+ //  */
+ // exports.hasAuthorization = function(req, res, next) {
+ //   if (req.article.user.id !== req.user.id) {
+ //     return res.status(403).send({
+ //       message: 'User is not authorized'
+ //     });
+ //   }
+ //   next();
+ //
+ // };
