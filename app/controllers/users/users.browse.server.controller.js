@@ -13,7 +13,8 @@ var mongoose = require('mongoose'),
  * List of Users
  */
 exports.list = function(req, res) {
- User.find().populate('user', 'displayName').exec(function(err, user) {// research this line
+
+ User.find().populate('user').exec(function(err, user) {// research this line
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
