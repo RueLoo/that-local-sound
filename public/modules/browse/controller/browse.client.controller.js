@@ -47,6 +47,8 @@ angular.module('browse').controller('BrowseController', ['$scope', '$stateParams
 
     // this is our query method.
     $scope.find = function() {
+      //$scope.users = [];
+
       $scope.users = User.query();//passes this guy to the html that calls this function
       window.foo = $scope;
     };

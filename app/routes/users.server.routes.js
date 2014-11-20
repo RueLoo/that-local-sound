@@ -10,8 +10,10 @@ module.exports = function(app) {
 	var users = require('../../app/controllers/users.server.controller');
 
 	// Setting up the users profile api
-	app.route('/browse').get(users.list);
+	app.route('/users/browse').get(users.list);
 
+	//app.route('/browse/:userId')
+	//.get(users.read);
 
 	app.route('/users/me').get(users.me);
 	app.route('/users').put(users.update);
