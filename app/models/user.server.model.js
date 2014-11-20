@@ -68,6 +68,7 @@ var UserSchema = new Schema({
 	},
 	providerData: {},
 	additionalProvidersData: {},
+
 	roles: {
 		type: [{
 			type: String,
@@ -75,6 +76,7 @@ var UserSchema = new Schema({
 		}],
 		default: ['user']
 	},
+	
 	updated: {
 		type: Date
 	},
