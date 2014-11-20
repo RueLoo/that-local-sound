@@ -1,0 +1,94 @@
+<section data-ng-controller="HeaderController" style="">
+<div ng-cintr>
+	<div class="sidepanel">
+		<div style="display:inline-block; border-radius:50%;width: 150px; height: 150px; overflow: hidden;margin-top:20px;"><img style="height: 100%;
+    align-self: center;" src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png"/>
+</div><br><a href="#">More Pictures</a>
+	</div>
+	<div style="float:right;width:85%;">
+		<h1>Nicole Kayal</h1>
+		<div data-ng-show="authentication.user"><h1 data-ng-bind="authentication.user.displayName"></h1>
+		<span data-ng-model="user.address.city">Location</span>
+		<div align=right>http://website.com</div>
+		</div>
+		<hr>	
+		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&color=0066cc"></iframe>
+		<article></article>
+		<i>Genre: </i><br/>
+		<i>Instruments: </i><br/><br/>
+		Bio goes here...<br/>
+		<div style="width:50%;margin:0 auto;">
+		<h2>Request this Artist</h2><br/>
+		<form style="border-radius:5px;background-color:lightgray;padding:20px;">		
+		Date  <input class="input" type="text" name="date" size="8">
+		<br><br>
+		Start time  <input class="input" type="text" name="starttime" size="5">
+		End time  <input class="input" type="text" name="endtime" size="5"><br><br>
+		Payment $ <input class="input" type="text" name="payment" size="7"><br><br>
+		<div style="width:20%;margin:0 auto;"><input class="button" type="submit" value="Submit">
+		</form></div></div>
+
+<!-- thumbnail image wrapped in a link -->
+<section id="gallery">
+    <!-- thumbnail image wrapped in a link -->
+    <section class="item">
+        <a href="#img1">
+          <img src="http://i58.tinypic.com/23r20ky.png">
+        </a>
+    </section>
+    <section class="item">
+        <a href="#img2">
+          <img src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png">
+        </a>
+    </section>
+    <section class="item">
+        <a href="#img3">
+          <img src="http://www.paulund.co.uk/wp-content/uploads/2012/01/google-map.jpg">
+        </a>
+    </section>
+</section>
+<div class="lightbox" id="img1">
+  <div class="box">
+    <a class="close" href="#">X</a>
+    <p class="title">Lorem ipsum dolor sit amet</p>
+    <div class="content">
+        <img src="http://i58.tinypic.com/23r20ky.png">
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
+    </div>
+    <a class="prev" href="#img3">Previous</a>
+    <a class="next" href="#img2">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+  <div class="lightbox" id="img2">
+  <div class="box">
+    <a class="close" href="#">X</a>
+    <p class="title">Lorem ipsum dolor sit amet</p>
+    <div class="content">
+        <img src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png">
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
+    </div>
+    <a class="prev" href="#img1">Previous</a>
+    <a class="next" href="#img3">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+  <div class="lightbox" id="img3">
+  <div class="box">
+    <a class="close" href="#">X</a>
+    <p class="title">Lorem ipsum dolor sit amet</p>
+    <div class="content">
+        <img src="http://www.paulund.co.uk/wp-content/uploads/2012/01/google-map.jpg">
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
+    </div>
+    <a class="prev" href="#img2">Previous</a>
+    <a class="next" href="#img1">Next</a>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+</div>
+</section>
+
+
