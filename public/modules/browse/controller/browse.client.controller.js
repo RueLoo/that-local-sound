@@ -52,7 +52,11 @@ angular.module('browse').controller('BrowseController', ['$scope', '$stateParams
       $scope.users = User.query();//passes this guy to the html that calls this function
       window.foo = $scope;
     };
-
+    // $scope.findOne = function() {
+    //   $scope.user = User.get({//this is a .Where function? - yea i'm pretty sure
+    //   user: $stateParams.user
+    //   });
+    // };
     // $scope.findOne = function() {
     //   $scope.article = Articles.get({//this is a .Where function? - yea i'm pretty sure
     //     articleId: $stateParams.articleId

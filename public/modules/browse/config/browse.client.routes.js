@@ -8,5 +8,9 @@ angular.module('browse').config(['$stateProvider', '$urlRouterProvider',
       url: '/browse/',
       templateUrl: 'modules/browse/views/browse.client.view.html'
     });
+    // state('viewProfile', {
+    //   url: '/users/:userId',
+    //   templateUrl: 'modules/browse/views/profile.client.view.html'
+    // });
   }
 ]);

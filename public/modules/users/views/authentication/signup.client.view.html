@@ -4,13 +4,7 @@
 		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
 			<fieldset>
 			<!--Radio buttons for artist/business select -->
-	<!-- 				<div class="form-group">
-	<input type="radio" ng-model="user.artist" value="artist"> Artist
-	<br/>
-	<input type="radio" ng-model="user.business" value="business"> Business
-	<tt>color = {{ | json}}</tt><br/>
-</div> -->
-			<!-- 	<label>Are you an Artist or a Business?</label>
+	 <label>Are you an Artist or a Business?</label>
 			<div class="form-group">
 				<div class="radio">
 					<label>
@@ -24,10 +18,10 @@
 						Business
 					</label>
 				</div>
-			</div> -->
+			</div>
 
 				<!-- Show artist sign up form -->
-				<!-- <div ng-show="isShown('Artist')"> -->
+				<div ng-show="isShown('Artist')">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -63,7 +57,7 @@
 				</div>
 
 				<!-- Show business sign up form -->
-				<!-- <div ng-show="isShown('Business')">
+				 <div ng-show="isShown('Business')">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -101,8 +95,7 @@
 						<a href="/#!/signin" class="show-signup">Sign in</a>
 					</div>
 					<div data-ng-show="error" class="text-center text-danger">
-						<strong data-ng-bind="error"></strong> -->
-					<!-- </div> -->
+						<strong data-ng-bind="error"></strong>
 				</div>
 			</fieldset>
 		</form>
