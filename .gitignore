@@ -1,9 +1,23 @@
+## Directory-based project format
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/*.local.xml
+
+## File-based project format
+*.ipr
+*.iml
+*.iws
+
+
+.bower-*/
+.sass-cache/
 .DS_Store
 .nodemonignore
-.sass-cache/
-npm-debug.log
-node_modules/
-public/lib
 app/tests/coverage/
-.bower-*/
-.idea/
+node_modules/
+npm-debug.log
+public/lib
