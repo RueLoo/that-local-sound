@@ -157,17 +157,20 @@ var UserSchema = new Schema({
 		default: ''
  },
 	 pricePerGig:{
-	 	type:Number
+	 	type:Number,
+		 default:0
 	 },
 	nameOfBussiness:{
   	type:String,
 			default: ''
 	 },
 	 descriptionOfBussines:{
-	 	type:String
+	 	type:String,
+		 default: ''
 	 },
 	 ownerOfBussiness:{
-	 	type:String
+	 	type:String,
+		 default: ''
 	 }
 
 	/*contians artist and bussines types*/

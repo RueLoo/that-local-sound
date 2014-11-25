@@ -9,7 +9,7 @@ angular.module('browse').controller('BrowseController', ['$scope', '$stateParams
     //     title: this.title,
     //     content: this.content
     //   });
-    //   article.$save(function(response) {
+    //   arti cle.$save(function(response) {
     //     $location.path('articles/' + response._id);
     //
     //     $scope.title = '';
