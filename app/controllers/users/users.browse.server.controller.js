@@ -9,20 +9,19 @@ var mongoose = require('mongoose'),
   _ = require('lodash');
 
 
-
 /**
  * Show the current user
  */
-exports.read = function(request, response) {
+exports.read = function (request, response) {
   response.json(request.User);
 };
 
 /**
  * List of Users
  */
-exports.list = function(req, res) {
+exports.list = function (req, res) {
 
- User.find().populate('user').exec(function(err, user) {// research this line
+  User.find().populate('user').exec(function (err, user) {// research this line
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -36,24 +35,24 @@ exports.list = function(req, res) {
 /**
  * User middleware
  */
- exports.userById = function(req, res, next, id) {
-   User.findById(id).populate('user').exec(function(err, user) {
-     if (err) return next(err);
-     if (!user) return next(new Error('Failed to load user ' + id));
-     req.user = user;
-     next();
-   });
- };
-
-  /**
-   * Article authorization middleware
-   */
-  exports.hasAuthorization = function(req, res, next) {
-    if (req.user.id !== req.user.id) {
-      return res.status(403).send({
-       message: 'User is not authorized'
-      });
-    }
+exports.userById = function (req, res, next, id) {
+  User.findById(id).populate('user').exec(function (err, user) {
+    if (err) return next(err);
+    if (!user) return next(new Error('Failed to load user ' + id));
+    req.user = user;
     next();
+  });
+};
 
-  };
+/**
+ * Article authorization middleware
+ */
+exports.hasAuthorization = function (req, res, next) {
+  if (req.user.id !== req.user.id) {
+    return res.status(403).send({
+      message: 'User is not authorized'
+    });
+  }
+  next();
+
+};
