@@ -3,8 +3,31 @@
     <h1>Artists</h1>
     <h2>Browse our Local pool of talent!</h2>
   </div>
+  <body>
+  <div class="search">
+    <h1>Pool of Local Talent</h1>
+    <label>search:</label>
+    <input ng-model="query" placeholder="Search for artists" autofocus>
+    <label class="formgroup">by:
+      <select ng-model="artistOrder">
+        <option value="firstName" selected>Name</option>
+        <option value="lastName"
+      </select>
+    </label>
+
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+    </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
+      descending
+    </label>
+
+  </div>
+
   <div class="list-group">
-    <a data-ng-repeat="user in users" data-ng-href="#!/users/{{user.id}}" class="list-group-item">
+    <a data-ng-repeat="user in users | filter:query | orderBy:artistOrder:direction" data-ng-href="#!/browse/{{user.id}" class="list-group-item">
       <div>
         <img src="http://placehold.it/70x70" class="avatar img-circle" alt="avatar">
         <h2 class="list-group-item-heading" data-ng-bind="user.displayName"></h2>
@@ -15,12 +38,10 @@
       </div>
       <div>
         <h4 class="list-group-item-heading" data-ng-bind="user.email"></h4>
-
-        <h5 class="list-group-item" data-ng-bind="user.bio"></h5>
       </div>
     </a>
   </div>
   <div class="alert alert-warning text-center" data-ng-if="users.$resolved && !users.length">
     No artist yet, tell your muscian friends to sign up <a href="/#!/users/signup">?
-  </div>
+  </a></div>
 </section>

@@ -4,16 +4,15 @@
  * Module dependencies.
  */
 var passport = require('passport');
+var users = require('../../app/controllers/users.server.controller');
+
 
 module.exports = function (app) {
   // User Routes
-  var users = require('../../app/controllers/users.server.controller');
 
   // Setting up the users profile api
-  app.route('/browse')
-    .get(users.list);
-  // app.route('/browse/:userId')
-  // .get(users.read);
+  app.route('/browse').get(users.list);
+  app.route('/browse/:userId').get(users.read);
   //app.route('/browse/:userId')
   //.get(users.read);
 

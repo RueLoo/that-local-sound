@@ -7,6 +7,10 @@ angular.module('browse').config(['$stateProvider', '$urlRouterProvider',
     state('browse', {
       url: '/browse/',
       templateUrl: 'modules/browse/views/browse.client.view.html'
+    }).
+    state('userDetailPage', {
+      url: '/browse/:userId',
+      templateUrl: 'modules/browse/views/profile.client.view.html'
     });
     // state('viewProfile', {
     //   url: '/users/:userId',
