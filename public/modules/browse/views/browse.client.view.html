@@ -1,8 +1,44 @@
 <section data-ng-controller="BrowseController" data-ng-init="find()">
-  <div class="page-header">
+  <div class="search">
     <h1>Artists</h1>
-    <h2>Browse our Local pool of talent!</h2>
+    <label>search:</label>
+    <input ng-model="query" placeholder ="Search for artists" autofocus>
+
+    <label class="formgroup">by:
+      <select ng-model="artistOrder">
+        <option value="name">Name</option>
+        <option value="stageName">Stagename</option>
+      </select>
+    </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      ascending
+    </label>
+    <label class="formgroup">
+      <input type="radio" ng-model="direction" name="direction" checked>
+      descending
+    </label>
   </div>
+
+  <ul class="artistlist">
+    <a data-ng-repeat="user in users | filter:query | orderBy:artistOrder:direction" data-ng-href="#!/browse/{{user._id}}" class="list-group-item">
+    <!-- <li class="artist cf" ng-repeat="user in users | filter: query | orderBy: artistOrder:direction"> -->
+      <!-- <a href="#/browse/{{user.indexOf(item)}}"> -->
+        <im ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{user.displayName}}">
+          <div class="info">
+            <h2>{{user.displayName}}</h2>
+            <h3>{{user.email}}</h3>
+            <p></p>
+          </div>
+      </li>
+    </a>
+    </ul>
+    <div class="alert alert-warning text-center" data-ng-if="users.$resolved && !users.length">
+      No artist yet, tell your muscian friends to sign up <a href="/#!/users/signup">?
+      </a></div>
+  </section>
+
+  <!-- </div>
   <body>
   <div class="search">
     <h1>Pool of Local Talent</h1>
@@ -41,7 +77,5 @@
       </div>
     </a>
   </div>
-  <div class="alert alert-warning text-center" data-ng-if="users.$resolved && !users.length">
-    No artist yet, tell your muscian friends to sign up <a href="/#!/users/signup">?
-  </a></div>
-</section>
+
+  </section> -->
