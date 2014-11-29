@@ -1,6 +1,4 @@
 'use strict';
-console.log('menus.client.service.js'+' loaded');
-//Menu service used for managing  menus
 angular.module('core').service('Menus', [
 
 	function() {

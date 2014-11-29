@@ -1,6 +1,6 @@
 'use strict';
 // Setting up route
-angular.module('users').config(['$stateProvider',
+angular.module('users').config(['$stateProvider','$urlRouterProvider',
 	function($stateProvider) {
 		// Users state routing
 		// going to try and put the dashboard controller here,
@@ -8,7 +8,8 @@ angular.module('users').config(['$stateProvider',
 		$stateProvider.
 		state('profile', {
 			url: '/settings/profile',
-			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
+			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html',
+			controller: 'SettingsController'
 		}).
 		state('password', {
 			url: '/settings/password',

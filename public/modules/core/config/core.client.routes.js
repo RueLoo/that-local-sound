@@ -1,5 +1,4 @@
 'use strict';
-console.log('core.client.routes.js'+' loaded');
 // Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {

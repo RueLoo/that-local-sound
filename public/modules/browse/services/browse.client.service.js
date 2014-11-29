@@ -1,5 +1,4 @@
 'use strict';
-console.log('articles.client.service.js'+' loaded');
 //Articles service used for communicating with the articles REST endpoints
 angular.module('browse').factory('User', ['$resource',
   function($resource) {
@@ -8,7 +7,6 @@ angular.module('browse').factory('User', ['$resource',
         method: 'PUT'
       }
     });
-
     // need help with the service
   }
 ]);

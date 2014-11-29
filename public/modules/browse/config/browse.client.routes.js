@@ -10,7 +10,7 @@ angular.module('browse').config(['$stateProvider', '$urlRouterProvider',
     }).
     state('userDetailPage', {
       url: '/browse/:userId',
-      templateUrl: 'modules/browse/views/profile.client.view.html'
+      templateUrl: 'modules/browse/views/userProfile.client.view.html'
     });
     // state('viewProfile', {
     //   url: '/users/:userId',

@@ -19,7 +19,6 @@ angular.module('users').config(['$httpProvider',
 								// Add unauthorized behaviour
 								break;
 						}
-
 						return $q.reject(rejection);
 					}
 				};
