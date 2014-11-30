@@ -1,94 +1,205 @@
-<section data-ng-controller="HeaderController" style="">
-<div ng-cintr>
-	<div class="sidepanel">
-		<div style="display:inline-block; border-radius:50%;width: 150px; height: 150px; overflow: hidden;margin-top:20px;"><img style="height: 100%;
-    align-self: center;" src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png"/>
-</div><br><a href="#">More Pictures</a>
-	</div>
-	<div style="float:right;width:85%;">
-		<h1>Nicole Kayal</h1>
-		<div data-ng-show="authentication.user"><h1 data-ng-bind="authentication.user.displayName"></h1>
-		<span data-ng-model="user.address.city">Location</span>
-		<div align=right>http://website.com</div>
+<section data-ng-controller="HomeController">
+	<div class="jumbotron text-center">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12">
+				<h1>That Local Sound!</h1>
+				<h2>Where musicians find gigs, and vendors find local talent</h2>
+			</div>
 		</div>
-		<hr>	
-		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&color=0066cc"></iframe>
-		<article></article>
-		<i>Genre: </i><br/>
-		<i>Instruments: </i><br/><br/>
-		Bio goes here...<br/>
-		<div style="width:50%;margin:0 auto;">
-		<h2>Request this Artist</h2><br/>
-		<form style="border-radius:5px;background-color:lightgray;padding:20px;">		
-		Date  <input class="input" type="text" name="date" size="8">
-		<br><br>
-		Start time  <input class="input" type="text" name="starttime" size="5">
-		End time  <input class="input" type="text" name="endtime" size="5"><br><br>
-		Payment $ <input class="input" type="text" name="payment" size="7"><br><br>
-		<div style="width:20%;margin:0 auto;"><input class="button" type="submit" value="Submit">
-		</form></div></div>
+		<br>
+		<div class="row">
+			<p class="lead">
+			</p>
+		</div>
+	</div>
+<!CAROUSEL>
 
-<!-- thumbnail image wrapped in a link -->
-<section id="gallery">
-    <!-- thumbnail image wrapped in a link -->
-    <section class="item">
-        <a href="#img1">
-          <img src="http://i58.tinypic.com/23r20ky.png">
-        </a>
-    </section>
-    <section class="item">
-        <a href="#img2">
-          <img src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png">
-        </a>
-    </section>
-    <section class="item">
-        <a href="#img3">
-          <img src="http://www.paulund.co.uk/wp-content/uploads/2012/01/google-map.jpg">
-        </a>
-    </section>
+
+
+    <div class=carousel>
+
+  <ul class=panes>
+    <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 1</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+    <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 2</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 3</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 4</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 5</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 6</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 7</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 8</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 9</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 10</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 11</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 12</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 13</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 14</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 15</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 16</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 17</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 18</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+        <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 19</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+            <li>
+    <div class="desc">
+        <a href="/dsm19944/" class="btn"><span>VIEW 20</span></a>
+        <strong class="name">dsm19944</strong>
+        <p>Germantown</p>
+    </div>
+      <img src="http://cdn.bandmix.com/bandmix_us/media/524/524529/1015663-m.jpg" alt="">
+    </li>
+  </ul>
+
+</div>
+
+
+
+	<div class="row">
+			 <div class="col-md-4 text-center">
+				<!img src="http://placehold.it/140x140" class="avatar img-circle" alt="avatar">
+				<h6>This is a local feature event</h6>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsa culpa doloribus perferendis repudiandae, hic, explicabo iusto labore eveniet, eaque aspernatur placeat temporibus maiores sint ipsum odio obcaecati reprehenderit ex.</p>
+			</div>
+			<div class="col-md-4 text-center">
+			<!img src="http://placehold.it/140x140" class="avatar img-circle" alt="avatar">
+			<h6>This is a local feature event</h6>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsa culpa doloribus perferendis repudiandae, hic, explicabo iusto labore eveniet, eaque aspernatur placeat temporibus maiores sint ipsum odio obcaecati reprehenderit ex.</p>
+		</div>
+		<div class="col-md-4 text-center">
+		<!img src="http://placehold.it/140x140" class="avatar img-circle" alt="avatar">
+		<h6>This is a local feature event</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ipsa culpa doloribus perferendis repudiandae, hic, explicabo iusto labore eveniet, eaque aspernatur placeat temporibus maiores sint ipsum odio obcaecati reprehenderit ex.</p>
+	</div>
+	</div>
 </section>
-<div class="lightbox" id="img1">
-  <div class="box">
-    <a class="close" href="#">X</a>
-    <p class="title">Lorem ipsum dolor sit amet</p>
-    <div class="content">
-        <img src="http://i58.tinypic.com/23r20ky.png">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
-    </div>
-    <a class="prev" href="#img3">Previous</a>
-    <a class="next" href="#img2">Next</a>
-    <div class="clear"></div>
-  </div>
-</div>
-  <div class="lightbox" id="img2">
-  <div class="box">
-    <a class="close" href="#">X</a>
-    <p class="title">Lorem ipsum dolor sit amet</p>
-    <div class="content">
-        <img src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
-    </div>
-    <a class="prev" href="#img1">Previous</a>
-    <a class="next" href="#img3">Next</a>
-    <div class="clear"></div>
-  </div>
-</div>
-  <div class="lightbox" id="img3">
-  <div class="box">
-    <a class="close" href="#">X</a>
-    <p class="title">Lorem ipsum dolor sit amet</p>
-    <div class="content">
-        <img src="http://www.paulund.co.uk/wp-content/uploads/2012/01/google-map.jpg">
-        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Text Modal Window Nullam at volutpat ipsum. Nullam nec posuere ante. Nulla molestie ac odio sed malesuada.Text Modal Window With a Video Ut dapibus odio eget vestibulum condimentum.</p>
-    </div>
-    <a class="prev" href="#img2">Previous</a>
-    <a class="next" href="#img1">Next</a>
-    <div class="clear"></div>
-  </div>
-</div>
-
-
-</div>
-</section>
-
-
