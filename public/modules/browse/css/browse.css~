@@ -135,7 +135,7 @@ time, mark, audio, video {
                     }
 
 		    a:hover {
-		      color:#78E69C;
+		      color:#85FFAD;
 		      text-decoration:none;
 		    }
                     /* Search Styles */

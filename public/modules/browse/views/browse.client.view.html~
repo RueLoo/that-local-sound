@@ -41,7 +41,7 @@ Browse musicians in your area and contact them to set up events for them to perf
             <h3>{{artist.email}}</h3>
 	    </div>
             <div style="float:right;width:50%;">{{artist.city}},{{artist.state}}<br>
-		{{artist.genre}}
+		{{artist.genre}}<br>stuff<br>stuff<br>stuff	
 		</div>
           </div>
       </li>
