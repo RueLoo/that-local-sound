@@ -8,7 +8,6 @@ var mongoose = require('mongoose'),
   User = mongoose.model('User'),
   _ = require('lodash');
 
-
 /**
  * Show the current user
  */
@@ -32,18 +31,37 @@ exports.list = function (req, res) {
   });
 
 };
-/**
- * User middleware
- */
-exports.userById = function (req, res, next, id) {
-  User.findById(id).populate('user').exec(function (err, user) {
-    if (err) return next(err);
-    if (!user) return next(new Error('Failed to load user ' + id));
-    req.user = user;
-    next();
-  });
-};
+ /**
+  * User middleware
+  */
 
+ exports.userByID = function (req, res, next, id) {
+   User.findOne({
+     _id: id
+   }).exec(function (err, user){
+     if(err) return next(err);
+     if(!user) return next (new Error('Failed to load user' + id));
+     req.user = user;
+     next();
+   });
+  //  User.findById(id).populate('user').exec(function (err, user) {
+  //    if (err) return next(err);
+  //    if (!user) return next(new Error('Failed to load user ' + id));
+  //    req.user = user;
+  //    next();
+  //  });
+ };
+
+ // exports.userByID = function (req, res, next, id) {
+ //   User.findOne({
+ //     _id: id
+ //   }).exec(function (err, user) {
+ //     if (err) return next(err);
+ //     if (!user) return next(new Error('Failed to load User ' + id));
+ //     req.profile = user;
+ //     next();
+ //   });
+ // };
 /**
  * Article authorization middleware
  */
@@ -54,5 +72,4 @@ exports.hasAuthorization = function (req, res, next) {
     });
   }
   next();
-
 };
