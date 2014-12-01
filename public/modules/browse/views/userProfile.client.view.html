@@ -1,10 +1,5 @@
 <section data-ng-controller="BrowseController" data-ng-init="findOne()">
-<h1 data-ng-bind="artist.displayName"></h1>
-<h1><a href="#!/browse/">&laquo; Back to Search</h1>
-
-
-
-<!-- <div ng-cintr>
+ <div ng-cintr>
 	<div class="sidepanel">
 		<div style="display:inline-block; border-radius:50%;width: 150px; height: 150px; overflow: hidden;margin-top:20px;"><img style="height: 100%;
     align-self: center;" src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png"/>
@@ -12,7 +7,7 @@
 	</div>
 	<div style="float:right;width:85%;">
 
-		<div data-ng-show="authentication.user"><h1 data-ng-bind="authentication.user.displayName"></h1>
+		<div data-ng-show="authentication.user"><h1 data-ng-bind="artist.stageName"></h1>
 		<span data-ng-model="user.address.city">Location</span>
 		<div align=right>http://website.com</div>
 		</div>
@@ -93,5 +88,7 @@ thumbnail image wrapped in a link
 </div>
 
 
-</div> -->
+</div>
+
+<h1><a href="#!/browse/">&laquo; Back to Search</h1>
 </section>

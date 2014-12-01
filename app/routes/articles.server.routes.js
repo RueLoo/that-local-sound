@@ -18,5 +18,5 @@ module.exports = function (app) {
     .delete(users.requiresLogin, articles.hasAuthorization, articles.delete);
 
   // Finish by binding the article middleware
-  app.param('articleId', articles.articleByID);
+  app.param('articleId', articles.articleByID);//<-- this part is confusing
 };
