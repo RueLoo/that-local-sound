@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('browse').controller('BrowseController', ['$scope', '$stateParams', '$location', 'Authentication', 'Users',
-  function($scope, $stateParams, $location, Authentication, Users) {
+angular.module('browse').controller('BrowseController', ['$scope', '$stateParams', '$location', 'Authentication', 'User',
+  function($scope, $stateParams, $location, Authentication, User) {
     $scope.authentication = Authentication;
 
     // $scope.create = function() {
@@ -48,13 +48,13 @@ angular.module('browse').controller('BrowseController', ['$scope', '$stateParams
     // this is our query method.
     $scope.find = function() {
       //$scope.users = [];
-
-      $scope.users = Users.query();//passes this guy to the html that calls this function
+      // the users part refers to the html
+      $scope.artists = User.query();//passes this guy to the html that calls this function
       window.foo = $scope;
     };
 
      $scope.findOne = function() {
-       $scope.user = Users.get({//this is a .Where function? - yea i'm pretty sure
+       $scope.artist = User.get({//this is a .Where function? - yea i'm pretty sure
          userId: $stateParams.userId
        });
        window.foo = $scope;

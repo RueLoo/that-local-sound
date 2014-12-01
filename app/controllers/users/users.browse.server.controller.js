@@ -19,8 +19,7 @@ exports.read = function (request, response) {
  * List of Users
  */
 exports.list = function (req, res) {
-
-  User.find().populate('user').exec(function (err, user) {// research this line
+  User.find({userType:'artist'}).populate('user').exec(function (err, user) {// research this line
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -34,23 +33,23 @@ exports.list = function (req, res) {
  /**
   * User middleware
   */
+exports.artistByID = function (req, res, next, id) {
+  User.findOne({
+    _id: id
+    }).exec(function (err, user) {
+      if (err) return next(err);
+      if (!user) return next(new Error('Failed to load user ' + id));
+      req.profile = user;
+      next();
+  });
+};
 
- exports.userByID = function (req, res, next, id) {
-   User.findOne({
-     _id: id
-   }).exec(function (err, user){
-     if(err) return next(err);
-     if(!user) return next (new Error('Failed to load user' + id));
-     req.user = user;
-     next();
-   });
   //  User.findById(id).populate('user').exec(function (err, user) {
   //    if (err) return next(err);
   //    if (!user) return next(new Error('Failed to load user ' + id));
   //    req.user = user;
   //    next();
   //  });
- };
 
  // exports.userByID = function (req, res, next, id) {
  //   User.findOne({

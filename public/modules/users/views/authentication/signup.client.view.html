@@ -8,7 +8,7 @@
 		<input type="radio" name="user" value="Artist" ng-model="user" ng-click="assignArtist()">Artist
 		<input type="radio" name="user" value="Business" ng-model="user" ng-click="assignBusiness()">Business
 				<!-- Show artist sign up form -->
-				<div ng-show="isShown('Artist')">
+			<!-- 	<div ng-show="isShown('Artist')"> -->
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName"
@@ -45,7 +45,7 @@
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
 					</div>
-				</div>
+				<!-- </div> -->
 
 				<!-- Show business sign up form -->
 				 <div ng-show="isShown('Business')">

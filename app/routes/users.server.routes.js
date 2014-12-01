@@ -12,6 +12,7 @@ module.exports = function (app) {
 
   // Setting up the users profile api
   app.route('/browse').get(users.list);
+
   app.route('/browse/:userId').get(users.read);
   //app.route('/browse/:userId')
   //.get(users.read);

@@ -28,7 +28,7 @@ Browse musicians in your area and contact them to set up events for them to perf
 <br>
 <br>
   <ul class="artists">
-    <a data-ng-repeat="artist in users | filter:query | orderBy:artistOrder:direction" data-ng-href="#!/browse/{{artist._id}}">
+    <a data-ng-repeat="artist in artists | filter:query | orderBy:artistOrder:direction" data-ng-href="#!/browse/{{artist._id}}">
 <li>
     <!-- <li class="artist cf" ng-repeat="user in users | filter: query | orderBy: artistOrder:direction"> -->
       <!-- <a href="#/browse/{{user.indexOf(item)}}"> -->
