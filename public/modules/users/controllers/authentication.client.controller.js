@@ -3,21 +3,9 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 	function($scope, $http, $location, Authentication) {
 		$scope.authentication = Authentication;
 		$scope.user = '';
-
-		$scope.assignArtist = function() {
-			$scope.user.userType= 'artist';
-
-		};
-		$scope.assignBusiness = function() {
-			$scope.user.userType = 'business';
-		};
-
 		// If user is signed in then redirect back home
 		if ($scope.authentication.user) $location.path('/');
 
-		$scope.isShown = function(user){
-			return user === $scope.user.userType;
-		};
 		// Default form shown is artist
 		//$scope.user = 'User';
 
@@ -28,7 +16,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('#!/profile/');
+				$location.path('/settings/profile');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
@@ -40,7 +28,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.authentication.user = response;
 
 				// And redirect to the index page
-				$location.path('#!/profile/');
+				$location.path('/dashboard/');
 			}).error(function(response) {
 				$scope.error = response.message;
 			});
