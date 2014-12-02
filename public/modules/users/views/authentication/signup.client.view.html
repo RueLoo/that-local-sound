@@ -5,10 +5,10 @@
 			<fieldset>
 			<!--Radio buttons for artist/business select -->
 	 <label>Are you an Artist or a Business?</label>
-		<input type="radio" name="user" value="Artist" ng-model="user" ng-click="assignArtist()">Artist
-		<input type="radio" name="user" value="Business" ng-model="user" ng-click="assignBusiness()">Business
+		<input type="radio" id="userType" name="userType" value="artist" data-ng-model="credentials.userType">Artist
+		<input type="radio" id="userType" name="userType" value="business" data-ng-model="credentials.userType">Business
 				<!-- Show artist sign up form -->
-			<!-- 	<div ng-show="isShown('Artist')"> -->
+			 	<div ng-show="content == artist">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName"
@@ -32,7 +32,7 @@
 					</div>
 					<div class="form-group">
 						<label for="stageName">Stage Name</label>
-						<input type="text" id="stageName" name="stageName" class="form-control" data-ng-model="credentials.stageName" placeholder="Stage Name">
+						<input type="text" id="userName" name="stageName" class="form-control" data-ng-model="credentials.userName" placeholder="Stage Name">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
@@ -45,10 +45,10 @@
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
 					</div>
-				<!-- </div> -->
+				</div> 
 
 				<!-- Show business sign up form -->
-				 <div ng-show="isShown('Business')">
+				 <div ng-show="content == business">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -67,7 +67,7 @@
 					</div>
 					<div class="form-group">
 						<label for="businessName">Business Name</label>
-						<input type="text" id="businessName" name="businessName" class="form-control" data-ng-model="credentials.businessName" placeholder="Business Name">
+						<input type="text" id="userName" name="businessName" class="form-control" data-ng-model="credentials.userName" placeholder="Business Name">
 					</div>
 					<div class="form-group">
 						<label for="Adress">Address</label>
