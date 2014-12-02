@@ -2,13 +2,16 @@
 	<h3 class="col-md-12 text-center">Sign up with your email</h3>
 	<div class="col-xs-offset-2 col-xs-8 col-md-offset-5 col-md-2">
 		<form name="userForm" data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
-			<fieldset>
 			<!--Radio buttons for artist/business select -->
-	 <label>Are you an Artist or a Business?</label>
-		<input type="radio" id="userType" name="userType" value="artist" data-ng-model="credentials.userType">Artist
-		<input type="radio" id="userType" name="userType" value="business" data-ng-model="credentials.userType">Business
+
+	<label>Are you an Artist or a Business?</label>
+	<label for="artist">Artist</label>
+	<input type="radio" id="userType" name="credentials.userType" value="artist" data-ng-model="credentials.userType">
+
+		<label for="business">Business</label>
+		<input type="radio" id="userType" name="userType" value="business" data-ng-model="credentials.userType">
 				<!-- Show artist sign up form -->
-			 	<div ng-show="content == artist">
+				<div ng-show="credentials.userType == artist">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName"
@@ -32,7 +35,7 @@
 					</div>
 					<div class="form-group">
 						<label for="stageName">Stage Name</label>
-						<input type="text" id="userName" name="stageName" class="form-control" data-ng-model="credentials.userName" placeholder="Stage Name">
+						<input type="text" id="stageName" name="stageName" class="form-control" data-ng-model="credentials.stageName" placeholder="Stage Name">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
@@ -45,10 +48,10 @@
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
 					</div>
-				</div> 
+				 </div>
 
 				<!-- Show business sign up form -->
-				 <div ng-show="content == business">
+				 <div ng-show="userType == business">
 					<div class="form-group">
 						<label for="firstName">First Name</label>
 						<input type="text" required id="firstName" name="firstName" class="form-control" data-ng-model="credentials.firstName" placeholder="First Name">
@@ -67,7 +70,7 @@
 					</div>
 					<div class="form-group">
 						<label for="businessName">Business Name</label>
-						<input type="text" id="userName" name="businessName" class="form-control" data-ng-model="credentials.userName" placeholder="Business Name">
+						<input type="text" id="businessName" name="businessName" class="form-control" data-ng-model="credentials.businessName" placeholder="Business Name">
 					</div>
 					<div class="form-group">
 						<label for="Adress">Address</label>
@@ -87,8 +90,8 @@
 					</div>
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
-				</div>
-			</fieldset>
+			</div>
+		</div>
 		</form>
 	</div>
 </section>
