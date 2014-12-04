@@ -154,7 +154,9 @@ exports.saveOAuthUserProfile = function (req, providerUserProfile, done) {
               descriptionOfBussiness: providerUserProfile.providerData,
               ownerOfBussiness: providerUserProfile.providerData,
               role: providerUserProfile.providerData,
-              userType: providerUserProfile.providerData
+              userType: providerUserProfile.providerData,
+              age: providerUserProfile.providerData,
+              gender: providerUserProfile.providerData
             });
             // And save the user
             user.save(function (err) {

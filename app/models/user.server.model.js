@@ -25,6 +25,7 @@ var validateLocalStrategyPassword = function (password) {
  * User Schema
  */
 var UserSchema = new Schema({
+  /* user basic info */
   firstName: {
     type: String,
     trim: true,
@@ -58,6 +59,12 @@ var UserSchema = new Schema({
     type: String,
     default: '',
     validate: [validateLocalStrategyPassword, 'Password should be longer']
+  },
+  age:{
+    type:Number
+  },
+  gender:{
+    type:String
   },
   salt: {
     type: String
