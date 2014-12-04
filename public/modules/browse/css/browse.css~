@@ -99,7 +99,7 @@ time, mark, audio, video {
                     }
 		
 		    a:hover {
-		      color:#85FFAD;
+		      color:#78E69C;
 		    }
 
                     h1{
@@ -135,7 +135,7 @@ time, mark, audio, video {
                     }
 
 		    a:hover {
-		      color:#85FFAD;
+		      color:#78E69C;
 		      text-decoration:none;
 		    }
                     /* Search Styles */
