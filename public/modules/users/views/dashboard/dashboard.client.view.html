@@ -1,9 +1,8 @@
-<!--  <div id="wrapper" data-ng-controller="HeaderController">
-
-  <div class="sidebar-brand" data-ng-show="authentication.user" id="sidebar-wrapper">
+<div id="wrapper">
+  <div class="sidebar-brand" id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li>
-        <a href='/#!/settings/profile'>Edit Profile</a>
+        <a ui-sref="dashboard.profile">Edit Profile</a>
        </li>
        <li>
          <a href='/#!/browse/'>Overview</a>
@@ -23,4 +22,12 @@
      </ul>
    </div>
  </div>
--->
+ <div id="page-content-wrapper">
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-lg-12">
+         <div ui-view></div>
+       </div>
+     </div>
+   </div>
+ </div>

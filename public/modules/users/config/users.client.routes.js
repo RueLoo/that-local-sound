@@ -6,9 +6,9 @@ angular.module('users').config(['$stateProvider','$urlRouterProvider',
 		// going to try and put the dashboard controller here,
 		// my thought is that it is connect the use class, so all it needs is the user.
 		$stateProvider.
-		state('profile', {
-			url: '/settings/profile',
-			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html'
+		state('dashboard.profile', {
+			url: '/profile',
+			templateUrl: 'modules/users/views/settings/edit-profile.client.view.html',
 		}).
 		state('password', {
 			url: '/settings/password',
