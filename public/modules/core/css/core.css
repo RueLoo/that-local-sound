@@ -14,9 +14,6 @@
 	border-color: #78FA89;
 }
 
-body{
-	padding-top:20px;
-}
 
 // for featured artists
 
@@ -189,10 +186,17 @@ body{
     100%  { left:0; }
 }
 .btn{
-  background-color:#FFD6AD;
-  border-color:#FFCC99;
+  background-color:#78E69C;
+  border-color:#78E69C;
 }
 .btn:hover{
-  background-color:#FFBD9D;
-  border-color:#FFCC99;
+  background-color:#A0EEBA;
+  border-color:#A0EEBA;
 }
+a{
+  color:darkgray;
+}
+a:hover{
+  color:#78E69C;
+}
+
