@@ -144,7 +144,6 @@ var UserSchema = new Schema({
   },
   yearsPlayed: {
     type: Number,
-    default: 0
   },
   genre: {
     type: [String],
@@ -165,10 +164,10 @@ var UserSchema = new Schema({
     type: String,
     default: ''
   },
-  descriptionOfBussines: {
+  descriptionOfBusiness: {
     type: String
   },
-  ownerOfBussiness: {
+  ownerOfBusiness: {
     type: String
   }
 
