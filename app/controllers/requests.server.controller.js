@@ -13,7 +13,7 @@ var mongoose = require('mongoose'),
  */
 exports.create = function(req, res) {
 	var request = new Request(req.body);
-	request.user = req.user;
+	request.fromBusiness = req.user;
 
 	request.save(function(err) {
 		if (err) {
@@ -72,8 +72,8 @@ exports.delete = function(req, res) {
 /**
  * List of Requests
  */
-exports.list = function(req, res) { 
-	Request.find().sort('-created').populate('user', 'displayName').exec(function(err, requests) {
+exports.list = function(req, res, id) {
+	Request.find({$or:[{fromBusiness:req.user.id}, {toArtist:req.user.id}]}).sort('-created').populate('user').exec(function(err, requests) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
@@ -83,11 +83,17 @@ exports.list = function(req, res) {
 		}
 	});
 };
+// show me all the request that this business is linked too.
+
+
+// show me all the request that this artist is linked too.
+
+// alright the request need to list by fromBusiness and then another search for by artist.
 
 /**
  * Request middleware
  */
-exports.requestByID = function(req, res, next, id) { 
+exports.requestByID = function(req, res, next, id) {
 	Request.findById(id).populate('user', 'displayName').exec(function(err, request) {
 		if (err) return next(err);
 		if (! request) return next(new Error('Failed to load Request ' + id));
