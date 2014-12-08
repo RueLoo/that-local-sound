@@ -26,6 +26,12 @@ var RequestSchema = new Schema({
 		type:Schema.ObjectId,
 		ref: 'User'
 	},
+	businessName:{
+		type:String
+	},
+	artistName:{
+		type:String
+	},
 	toArtist:{
 		type:Schema.ObjectId,
 		ref:'User'
