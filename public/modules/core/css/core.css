@@ -199,4 +199,12 @@ a{
 a:hover{
   color:#78E69C;
 }
-
+.jumbotron{
+  background-image: url('http://i62.tinypic.com/343ll69.jpg');
+  background-size:cover;
+}
+.carousel_text{
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
