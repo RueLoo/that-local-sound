@@ -24,11 +24,11 @@
 		<br><br>
 		Start time  <input class="input" type="text" name="starttime" size="5">
 		End time  <input class="input" type="text" name="endtime" size="5"><br><br>
-		Payment \$ <input class="input" type="text" name="payment" size="7"><br><br>
+		Payment $ <input class="input" type="text" name="payment" size="7"><br><br>
 		<div style="width:20%;margin:0 auto;"><input class="button" type="submit" value="Submit">
 		</form></div></div>
 
-thumbnail image wrapped in a link
+<!--thumbnail image wrapped in a link
 <section id="gallery">
     thumbnail image wrapped in a link
     <section class="item">
@@ -88,7 +88,7 @@ thumbnail image wrapped in a link
 </div>
 
 
-</div>
+</div>-->
 
 <h1><a href="#!/browse/">&laquo; Back to Search</h1>
 </section>

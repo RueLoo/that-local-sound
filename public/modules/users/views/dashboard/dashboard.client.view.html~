@@ -1,4 +1,4 @@
-<!--<div id="wrapper" data-ng-controller="HeaderController">
+<div id="wrapper" data-ng-controller="HeaderController">
 
   <div class="sidebar-brand" data-ng-show="authentication.user" id="sidebar-wrapper">
     <ul class="sidebar-nav">
@@ -23,4 +23,4 @@
      </ul>
    </div>
  </div>
--->
+

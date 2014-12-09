@@ -13,7 +13,7 @@
 		<hr>
 		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&color=0066cc"></iframe>
 		<article></article>
-		<i>Genre: </i><span data-ng-bind="user.genre"></span><br/>
+		<i>Genre111: </i><span data-ng-bind="user.genre"></span><br/>
 		<i>Instruments: </i><span data-ng-bind="user.instrumentsPlayed"></span><br/><br/>
 		<span data-ng-bind="user.bio"></span><br/>
 		<div style="width:50%;margin:0 auto;">
