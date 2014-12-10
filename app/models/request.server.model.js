@@ -10,30 +10,19 @@ var mongoose = require('mongoose'),
  * Request Schema
  */
 var RequestSchema = new Schema({
-	// Request model fields
-	// ...
+	name: {
+		type: String,
+		default: '',
+		required: 'Please fill Request name',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now
 	},
-	title: {
-		type: String,
-		default: '',
-		trim: true,
-		required: 'Title cannot be blank'
-	},
-	content: {
-		type: String,
-		default: '',
-		trim: true
-	},
-	fromBusiness: {
+	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	},
-	toArtist:{
-		type: Schema.ObjectId,
-		ref:'User'
 	}
 });
 

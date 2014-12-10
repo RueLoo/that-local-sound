@@ -7,12 +7,12 @@ background:#eee;
   <div class="search">
     <h1>Artists Near You</h1>
     <label>search:</label>
-    <input ng-model="query" placeholder ="Search for artists" autofocus>
+    <input ng-model="query" placeholder ="Search for Artists" autofocus>
 
     <label class="formgroup">by:
       <select ng-model="artistOrder">
-        <option value="name">Name</option>
-        <option value="stageName">Stagename</option>
+        <option value="displayName">Name</option>
+        <option value="username">Stagename</option>
       </select>
     </label>
     <label class="formgroup">
@@ -20,12 +20,11 @@ background:#eee;
       ascending
     </label>
     <label class="formgroup">
-      <input type="radio" ng-model="direction" name="direction" checked>
+      <input type="radio" ng-model="direction" name="direction" value="reverse">
       descending
     </label>
   </div>
 Browse musicians in your area and contact them to set up events for them to perform at.
-<br>
 <br>
   <ul class="artists">
     <a data-ng-repeat="artist in artists | filter:query | orderBy:artistOrder:direction" data-ng-href="#!/browse/{{artist._id}}">
@@ -36,9 +35,10 @@ Browse musicians in your area and contact them to set up events for them to perf
 	<div style="border:1px solid lightgray;padding:10px;height:150px;overflow:hidden;" class="info">
 	<div style="float:left;width:50%;">
 	<img style="float:left; margin-right:10px;" src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png"/>
-            <h2>{{artist.displayName}}</h2>
-	    <h3>{{artist.stageName}}</h3>
-            <h3>{{artist.email}}</h3>
+            <h1>{{artist.stageName}}</h1>
+	    <h2>{{artist.displayName}}</h2>
+      <h3>{{artist.email}}</h3>
+      
 	    </div>
             <div style="float:right;width:50%;">{{artist.city}}, {{artist.state}}<br>
 		{{artist.genre}}

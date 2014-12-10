@@ -10,6 +10,7 @@
 			<input type="radio" id="userType" name="userType" value="business" data-ng-model="credentials.userType">
 
 			<fieldset>
+<<<<<<< HEAD
 				<div ng-show="credentials.userType == 'artist'">
 					<div class="form-group">
 						<!-- add in conditional logic for business -->
@@ -30,6 +31,13 @@
 					<div data-ng-show="error" class="text-center text-danger">
 						<strong data-ng-bind="error"></strong>
 					</div>
+=======
+
+				<div class="form-group">
+					<!-- add in conditional logic for business -->
+					<label for="email">StageName</label>
+					<input type="text" id="username" name="username" class="form-control" data-ng-model="credentials.username" placeholder="Stage Name">
+>>>>>>> 1bbb8c5945a6e50f682e556136251ad344e9e526
 				</div>
 				<div ng-show="credentials.userType == 'business'">
 					<div class="form-group">
