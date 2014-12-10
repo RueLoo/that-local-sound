@@ -40,7 +40,11 @@
     "glob": "~4.0.5",
     "async": "~0.9.0",
     "nodemailer": "~1.3.0",
-    "chalk": "~0.5"
+    "chalk": "~0.5",
+    "geolocation": "~0.2.0",
+    "passport-soundcloud": "~0.1.2",
+    "soundcloudnodejs": "~1.1.3",
+    "soundclouder" : "~0.8.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

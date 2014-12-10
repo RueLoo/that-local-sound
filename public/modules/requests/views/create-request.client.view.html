@@ -9,7 +9,7 @@
         <div class="form-group">
           <label class="control-label" for="name">Date of Gig</label>
           <div class="controls">
-            <input type="date" id="exampleInput" name="input" ng-model="value" placeholder="mm-dd-yyyy" min="2013-01-01" max="2013-12-31" required />
+            <input type="date" id="dateOfGig" name="input" data-ng-model="dateOfGig" placeholder="mm-dd-yyyy" required />
             <span class="error" ng-show="myForm.input.$error.required">
             Required!
             </span>
@@ -19,7 +19,7 @@
           </div>
           <label class="control-label" for="name">Rehearsal-Time</label>
           <div class="controls">
-            <input type="time" id="exampleInput" name="input" ng-model="value" placeholder="HH:mm:ss" min="2013-01-01" max="2013-12-31" required />
+            <input type="time" id="rehearsalTime" name="input" data-ng-model="rehearsalTime" placeholder="HH:mm:ss" required />
             <span class="error" ng-show="myForm.input.$error.required">
               Required!</span>
               <span class="error" ng-show="myForm.input.$error.date">
@@ -27,7 +27,7 @@
           </div>
           <label class="control-label" for="name">Start-Time</label>
           <div class="controls">
-            <input type="time" id="exampleInput" name="input" ng-model="value" placeholder="HH:mm:ss" min="2013-01-01" max="2013-12-31" required />
+            <input type="time" id="startTime" name="input" data-ng-model="startTime" placeholder="HH:mm:ss"  required />
             <span class="error" ng-show="myForm.input.$error.required">
             Required!</span>
             <span class="error" ng-show="myForm.input.$error.date">
@@ -35,13 +35,13 @@
           </div>
           <label class="control-label" for="name">End-Time</label>
           <div class="controls">
-            <input type="date" id="exampleInput" name="input" ng-model="value" placeholder="HH:mm:ss" min="2013-01-01" max="2013-12-31" required />
+            <input type="date" id="endTime" name="input" data-ng-model="endTime" placeholder="HH:mm:ss" required />
             <span class="error" ng-show="myForm.input.$error.required">Required!</span>
             <span class="error" ng-show="myForm.input.$error.date">Not a valid date!</span>
           </div>
           <label class="control-label" for="name">Payment for Gig</label>
           <div class="controls">
-            <input type="number" id="exampleInput" name="input" ng-model="value" placeholder="0.00" min="2013-01-01" max="2013-12-31" required />
+            <input type="number" id="amount" name="input" data-ng-model="amount" placeholder="0.00" required />
             <span class="error" ng-show="myForm.input.$error.required">Required!</span>
             <span class="error" ng-show="myForm.input.$error.date">Not a valid date!</span>
           </div>

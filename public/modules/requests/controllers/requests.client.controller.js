@@ -9,23 +9,45 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 		$scope.create = function() {
 			// Create new Request object
 			var request = new Requests ({
-				name: this.name
+				fromBusiness: this.user,
+				dateOfGig: this.dateOfGig,
+				rehearsalTime:this.rehearsalTime,
+				startTime:this.startTime,
+				endTime:this.endTime,
+				toArtist:this.artist._id,
+				amount:this.amount,
+				businessName:this.user.username,
+				artistName:this.artist.username
 			});
 
-			// Redirect after save
-			request.$save(function(response) {
-				$location.path('requests/' + response._id);
+			request.$save(function(response){
 
-				// Clear form fields
-				$scope.name = '';
-			}, function(errorResponse) {
+				$scope.dateOfGig = '';
+				$scope.rehearsalTime ='';
+				$scope.startTime ='';
+				$scope.endTime ='';
+				$scope.amount ='';
+
+			}, function(errorResponse){
 				$scope.error = errorResponse.data.message;
 			});
 		};
 
+
+			// Redirect after save
+		// 	request.$save(function(response) {
+		// 	//	$location.path('requests/' + response._id);
+		//
+		// 		// Clear form fields
+		//
+		// 	}, function(errorResponse) {
+		// 		$scope.error = errorResponse.data.message;
+		// 	});
+		// };
+
 		// Remove existing Request
 		$scope.remove = function(request) {
-			if ( request ) { 
+			if ( request ) {
 				request.$remove();
 
 				for (var i in $scope.requests) {
@@ -58,7 +80,7 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 
 		// Find existing Request
 		$scope.findOne = function() {
-			$scope.request = Requests.get({ 
+			$scope.request = Requests.get({
 				requestId: $stateParams.requestId
 			});
 		};
