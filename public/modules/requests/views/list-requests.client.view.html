@@ -6,6 +6,7 @@
 <!-- ''      comeback and edit this
  -->        <a data-ng-repeat="request in requests" data-ng-href="#!/requests/{{request._id}}" class="list-group-item">
 			<small class="list-group-item-text">
+        <h1 data-ng-bind="requests.businessName"></h1>
 				<span data-ng-bind="request.created | date:'medium'"></span>
 				by
 				<span data-ng-bind="request.user.displayName"></span>

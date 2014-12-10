@@ -21,7 +21,7 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 			});
 
 			request.$save(function(response){
-				$location.path('/dashboard/requests');
+				$location.path('/dashboard//requests');
 				$scope.dateOfGig = '';
 				$scope.rehearsalTime ='';
 				$scope.startTime ='';
