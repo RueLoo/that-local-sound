@@ -19,23 +19,20 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 <<<<<<< HEAD
 				businessName:this.user.username,
 				artistName:this.artist.username
+=======
+				message:this.message,
+			  // nameOfBusiness:this.user.username,
+				// nameOfArtist:this.artist.username
+>>>>>>> requests
 			});
 
 			request.$save(function(response){
-				$location.path('/dashboard/requests');
+				$location.path('/dashboard//requests');
 				$scope.dateOfGig = '';
 				$scope.rehearsalTime ='';
 				$scope.startTime ='';
 				$scope.endTime ='';
 				$scope.amount ='';
-=======
-
-			});
-
-			// Redirect after save
-			request.$save(function(response) {
-				$location.path('/dashboard//requests');
->>>>>>> requests
 
 			}, function(errorResponse){
 				$scope.error = errorResponse.data.message;

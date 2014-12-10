@@ -16,8 +16,9 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 				endTime:this.endTime,
 				toArtist:this.artist._id,
 				amount:this.amount,
-				businessName:this.user.username,
-				artistName:this.artist.username
+				message:this.message,
+			  // nameOfBusiness:this.user.username,
+				// nameOfArtist:this.artist.username
 			});
 
 			request.$save(function(response){

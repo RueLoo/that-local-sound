@@ -1,35 +1,28 @@
 <section data-ng-controller="RequestsController" data-ng-init="find()">
     <div class="page-header">
-<<<<<<< HEAD
-        <h1>Your Requests </h1>
-    </div>
-    <div class="list-group">
-        <a data-ng-repeat="request in requests" data-ng-href="#!/requests/{{request._id}}" class="list-group-item">
-          <h1 data-ng-bind="request.artistName"></h1>
-=======
         <h1>Your Request Inbox</h1>
     </div>
     <div class="list-group">
+<<<<<<< HEAD
 <!-- ''      comeback and edit this
  -->        <a data-ng-repeat="request in requests" data-ng-href="#!/requests/{{request._id}}" class="list-group-item">
->>>>>>> c603f7ae36386becdf6cc68140c96e1c91b15c16
 			<small class="list-group-item-text">
+        <h1 data-ng-bind="requests.businessName"></h1>
 				<span data-ng-bind="request.created | date:'medium'"></span>
 				by
 				<span data-ng-bind="request.user.displayName"></span>
 			</small>
 			<h4 class="list-group-item-heading" data-ng-bind="request.name"></h4>
         </a>
-    </div>
-<<<<<<< HEAD
-    <div class="alert alert-warning text-center" data-ng-hide="!requests.$resolved || requests.length">
-      No Requests yet, check back later.
-    </div>
-</section>
-<!-- business Name would like to request you for an evet on date. would you like to accept or decline? -->
 =======
+        <a data-ng-repeat="request in requests" data-ng-href="#!/requests/{{request._id}}" class="list-group-item">
+		<h1>The event is on {{request.dateOfGig}}</h1>
+    <h2>Be at the venue for Rehersal at {{request.rehearsalTime}}</h2>
+    <h4>The time slot is {{request.startTime}} to {{request.endTime}}</h4>
+    <h4>The amount for the gig is {{request.amount}}</h4>
+>>>>>>> requests
+    </div>
     <div class="alert alert-warning text-center" data-ng-hide="!requests.\$resolved || requests.length">
       No Requests yet, check back later.
     </div>
 </section>
->>>>>>> c603f7ae36386becdf6cc68140c96e1c91b15c16
