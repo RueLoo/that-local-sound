@@ -36,6 +36,15 @@ var RequestSchema = new Schema({
 	},
 	amount:{
 		type:Number
+	},
+	message:{
+		type:String
+	},
+	nameOfBusiness:{
+		type:String
+	},
+	nameOfArtist:{
+		type:String
 	}
 });
 

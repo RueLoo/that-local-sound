@@ -4,14 +4,10 @@
     </div>
     <div class="list-group">
         <a data-ng-repeat="request in requests" data-ng-href="#!/requests/{{request._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="request.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="request.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="request.name"></h4>
-        </a>
+		<h1>The event is on {{request.dateOfGig}}</h1>
+    <h2>Be at the venue for Rehersal at {{request.rehearsalTime}}</h2>
+    <h4>The time slot is {{request.startTime}} to {{request.endTime}}</h4>
+    <h4>The amount for the gig is {{request.amount}}</h4>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!requests.$resolved || requests.length">
     	No Requests yet, why don't you <a href="/#!/requests/create">create one</a>?
