@@ -17,11 +17,16 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 				toArtist:this.artist._id,
 				amount:this.amount,
 				businessName:this.user.username,
+<<<<<<< HEAD
 				artistName:this.artist.username
+=======
+				artistName:this.artist.username,
+				businessAddress:this.user.address
+>>>>>>> c603f7ae36386becdf6cc68140c96e1c91b15c16
 			});
 
 			request.$save(function(response){
-				$location.path('/dashboard/requests');
+
 				$scope.dateOfGig = '';
 				$scope.rehearsalTime ='';
 				$scope.startTime ='';
@@ -32,6 +37,18 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 				$scope.error = errorResponse.data.message;
 			});
 		};
+
+
+			// Redirect after save
+		// 	request.$save(function(response) {
+		// 	//	$location.path('requests/' + response._id);
+		//
+		// 		// Clear form fields
+		//
+		// 	}, function(errorResponse) {
+		// 		$scope.error = errorResponse.data.message;
+		// 	});
+		// };
 
 		// Remove existing Request
 		$scope.remove = function(request) {

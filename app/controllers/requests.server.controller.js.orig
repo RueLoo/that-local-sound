@@ -12,6 +12,7 @@ var mongoose = require('mongoose'),
  * Create a Request
  */
 exports.create = function(req, res) {
+	
 	var request = new Request(req.body);
 	request.fromBusiness = req.user;
 
@@ -72,8 +73,13 @@ exports.delete = function(req, res) {
 /**
  * List of Requests
  */
+<<<<<<< HEAD
+exports.list = function(req, res) {
+	Request.find({$or:[{fromBusiness:req.user.id}, {toArtist:req.user.id}]}).sort('-created').populate('user', 'displayName').exec(function(err, requests) {
+=======
 exports.list = function(req, res, id) {
 	Request.find({$or:[{fromBusiness:req.user.id}, {toArtist:req.user.id}]}).sort('-created').populate('user').exec(function(err, requests) {
+>>>>>>> c603f7ae36386becdf6cc68140c96e1c91b15c16
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
