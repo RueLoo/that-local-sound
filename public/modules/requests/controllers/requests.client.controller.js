@@ -15,12 +15,13 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 				startTime:this.startTime,
 				endTime:this.endTime,
 				toArtist:this.artist._id,
-				amount:this.amount
+				amount:this.amount,
+
 			});
 
 			// Redirect after save
 			request.$save(function(response) {
-				$location.path('requests/' + response._id);
+				$location.path('/dashboard//requests');
 
 				// Clear form fields
 				$scope.name = '';

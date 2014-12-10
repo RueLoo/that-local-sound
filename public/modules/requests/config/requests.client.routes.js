@@ -6,7 +6,7 @@ angular.module('requests').config(['$stateProvider',
 		// Requests state routing
 		$stateProvider.
 		state('dashboard.listRequests', {
-			url: '/requestsFromBusiness',
+			url: '/requests',
 			templateUrl: 'modules/requests/views/list-requests.client.view.html'
 		}).
 		state('createRequest', {
