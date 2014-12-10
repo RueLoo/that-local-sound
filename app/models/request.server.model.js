@@ -10,19 +10,38 @@ var mongoose = require('mongoose'),
  * Request Schema
  */
 var RequestSchema = new Schema({
-	name: {
-		type: String,
-		default: '',
-		required: 'Please fill Request name',
-		trim: true
+	dateOfGig:{
+		type:Date
+	},
+	rehearsalTime:{
+		type:Number
+	},
+	startTime:{
+		type:Number
+	},
+	endTime:{
+		type:Number
+	},
+	fromBusiness:{
+		type:Schema.ObjectId,
+		ref: 'User'
+	},
+	businessName:{
+		type:String
+	},
+	artistName:{
+		type:String
+	},
+	toArtist:{
+		type:Schema.ObjectId,
+		ref:'User'
 	},
 	created: {
 		type: Date,
 		default: Date.now
 	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
+	amount:{
+		type:Number
 	}
 });
 

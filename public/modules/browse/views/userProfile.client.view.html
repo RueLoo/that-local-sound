@@ -1,39 +1,32 @@
 <section data-ng-controller="BrowseController" data-ng-init="findOne()">
- <!-- <div ng-cintr> -->
-	<!-- <div class="sidepanel">
+ <div ng-cintr>
+	<div class="sidepanel">
 	  <div style="display:inline-block; border-radius:50%;width: 150px; height: 150px; overflow: hidden;margin-top:20px;"><img style="height: 100%;
 	    align-self: center;" src="https://cdn2.iconfinder.com/data/icons/free-basic-icon-set-2/300/2-128.png"/>
 	    </div><br><a href="#">More Pictures</a>
-	</div> -->
+	</div>
 
-	<div style="float:right;width:85%;">
-    <h1 data-ng-bind="artist.username"></h1>
-    <h2 data-ng-bind="artist.displayName"></h1>
-		<span data-ng-bind="artist.city"></span>
-		<div align=right>http://website.com</div><!--add website here -->
-		<hr>
-		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&color=0066cc"></iframe>
-		<article></article>
-		<i>Genre: </i><br/>
-		<i>Instruments: </i><br/><br/>
-		Bio goes here...<br/>
-    <div ng-if="authentication.user.userType == 'business'">
-      <div ng-include src="'modules/requests/views/create-request.client.view.html'">
-      </div>
-    </div>
 
-	<!-- <div style="width:50%;margin:0 auto;">
+	  <div style="width:50%;margin:0 auto;">
 	<h2>Request this Artist</h2><br/>;
 
 
-	<form style="border-radius:5px;background-color:lightgray;padding:20px;">
-	Date  <input class="input" type="text" name="date" size="8">
-	<br><br>
-	Start time  <input class="input" type="text" name="starttime" size="5">
-	End time  <input class="input" type="text" name="endtime" size="5"><br><br>
-	Payment \\\$ <input class="input" type="text" name="payment" size="7"><br><br>
-	<div style="width:20%;margin:0 auto;"><input class="button" type="submit" value="Submit">
-	</form></div></div>
+	<div style="float:right;width:85%;">
+		<h1 data-ng-bind="artist.username"></h1>
+		<h2 data-ng-bind="artist.displayName"></h1>
+			<span data-ng-bind="artist.city"></span>
+			<div align=right>http://website.com</div><!--add website here -->
+			<hr>
+			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&color=0066cc"></iframe>
+			<article></article>
+			<i>Genre: </i><br/>
+			<i>Instruments: </i><br/><br/>
+			Bio goes here...<br/>
+			<div ng-if="authentication.user.userType == 'business'">
+				<div ng-include src="'modules/requests/views/create-request.client.view.html'">
+				</div>
+			</div>
+			
 
 	thumbnail image wrapped in a link
 	<section id="gallery">
@@ -92,10 +85,10 @@
 	    <a class="next" href="#img1">Next</a>
 	    <div class="clear"></div>
 	  </div>
-	</div> -->
+	</div>
 </div>
 
-<!-- </div> -->
+</div>
 
 <h1><a href="#!/browse/">&laquo; Back to Search</h1>
 </section>

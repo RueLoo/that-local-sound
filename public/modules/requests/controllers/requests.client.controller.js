@@ -9,7 +9,16 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 		$scope.create = function() {
 			// Create new Request object
 			var request = new Requests ({
-				name: this.name
+				fromBusiness: this.user,
+				dateOfGig: this.dateOfGig,
+				rehearsalTime:this.rehearsalTime,
+				startTime:this.startTime,
+				endTime:this.endTime,
+				toArtist:this.artist._id,
+				amount:this.amount,
+				businessName:this.user.username,
+				artistName:this.artist.username,
+				businessAddress:this.user.address
 			});
 
 			// Redirect after save
@@ -25,7 +34,7 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 
 		// Remove existing Request
 		$scope.remove = function(request) {
-			if ( request ) { 
+			if ( request ) {
 				request.$remove();
 
 				for (var i in $scope.requests) {
@@ -58,7 +67,7 @@ angular.module('requests').controller('RequestsController', ['$scope', '$statePa
 
 		// Find existing Request
 		$scope.findOne = function() {
-			$scope.request = Requests.get({ 
+			$scope.request = Requests.get({
 				requestId: $stateParams.requestId
 			});
 		};
