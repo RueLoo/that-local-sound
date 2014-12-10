@@ -17,84 +17,239 @@
 			</div>
 			<!-- edit form column -->
 			<div class="col-md-9 personal-info">
+				<div ng-show="user.userType == 'artist'">
+					<h3>Personal info</h3>
 
-				<h3>Personal info</h3>
+					<div class="form-group">
+						<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" class="signin form-horizontal" autocomplete="off">
+							<fieldset>
 
-				<div class="form-group">
-					<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" class="signin form-horizontal" autocomplete="off">
-						<fieldset>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">First name:</label>
-								<div class="col-lg-8">
-									<input class="form-control" type="text" data-ng-model="user.firstName" placeholder="First Name">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">First name:</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" data-ng-model="user.firstName" placeholder="First Name">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Last name:</label>
-								<div class="col-lg-8">
-									<input class="form-control" type="text" data-ng-model="user.lastName" placeholder="Last Name">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Last name:</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" data-ng-model="user.lastName" placeholder="Last Name">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Age:</label>
-								<div class="col-lg-8">
-									<input class="form-control" type="Number" data-ng-model="user.age" placeholder="Age">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Email:</label>
+									<div class="col-lg-8">
+										<input class="form-control" id="email" type="email" name="email" data-ng-model="user.email" placeholder="Email">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Email:</label>
-								<div class="col-lg-8">
-									<input class="form-control" id="email" type="email" name="email" data-ng-model="user.email" placeholder="Email">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Age:</label>
+									<div class="col-lg-8">
+										<input type="Number" id="age" name="age" class="form-control" data-ng-model="user.age" placeholder="Age">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">User Name:</label>
-								<div class="col-lg-8">
-									<input type="text" id="username" name="username" class="form-control" data-ng-model="user.username" placeholder="Username">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Gender:</label>
+									<div class="col-lg-8">
+										<input type="text" id="gender" name="gender" class="form-control" data-ng-model="user.gender" placeholder="Male or Female">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Phone Number:</label>
-								<div class="col-lg-8">
-									<input type="Number" id="cell_phone_number" name="cell_phone_number" class="form-control" data-ng-model="user.cell_phone_number" placeholder="Cell Phone">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Street Address:</label>
+									<div class="col-lg-8">
+										<input type="text" id="street_one" name="street_one" class="form-control" data-ng-model="user.street_one" placeholder="Street Address">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Street Address:</label>
-								<div class="col-lg-8">
-									<input type="text" id="street_one" name="street_one" class="form-control" data-ng-model="user.address.street_one" placeholder="Street Address">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">City:</label>
+									<div class="col-lg-8">
+										<input type="text" id="city" name="city" class="form-control" data-ng-model="user.city" placeholder="City">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">City:</label>
-								<div class="col-lg-8">
-									<input type="text" id="city" name="city" class="form-control" data-ng-model="user.address.city" placeholder="City">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">State:</label>
+									<div class="col-lg-8">
+										<input type="text" id="state" name="state" class="form-control" data-ng-model="user.state" placeholder="State">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">State:</label>
-								<div class="col-lg-8">
-									<input type="text" id="state" name="state" class="form-control" data-ng-model="user.address.state" placeholder="State">
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Zip Code:</label>
+									<div class="col-lg-8">
+										<input type="text" id="zipcode" name="zipcode" class="form-control" data-ng-model="user.zipcode" placeholder="Zip Code">
+									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label class="col-lg-3 control-label">Zip Code:</label>
-								<div class="col-lg-8">
-									<input type="text" id="zipcode" name="zipcode" class="form-control" data-ng-model="user.address.zipcode" placeholder="Zip Code">
+							</fieldset>
+						</form>
+						<h3>Account Info</h3>
+						<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" class="signin form-horizontal" autocomplete="off">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Stage Name:</label>
+									<div class="col-lg-8">
+										<input type="text" id="username" name="username" class="form-control" data-ng-model="user.stageName" placeholder="Username">
+									</div>
 								</div>
-							</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">User Type:</label>
+									<div class="col-lg-8">
+										<span data-ng-bind="user.userType"></span>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+						<h3>Artist Info</h3>
+						<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" class="signin form-horizontal" autocomplete="off">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Genre:</label>
+									<div class="col-lg-8">
+										<input type="text" id="genre" name="genre" class="form-control" data-ng-model="user.genre" placeholder="Genre(s)">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Instruments Played:</label>
+									<div class="col-lg-8">
+										<input type="text" id="instrumentsplayed" name="instrumentsplayed" class="form-control" data-ng-model="user.instrumentsPlayed" placeholder="Instruments Played">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Years Played:</label>
+									<div class="col-lg-8">
+										<input type="Number" id="yearsplayed" name="yearsplayed" class="form-control" data-ng-model="user.yearsPlayed" placeholder="Years Played">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Bio:</label>
+									<div class="col-lg-8">
+										<textarea type="text" id="bio" name="bio" class="form-control" data-ng-model="user.bio" placeholder="Bio"></textarea>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Price Per Gig:</label>
+									<div class="col-lg-8">
+										<input type="Number" id="pricepergig" name="pricepergig" class="form-control" data-ng-model="user.pricePerGig" placeholder="Price Per Gig">
+									</div>
+								</div>
 
-							<div class="text-center form-group">
-								<button type="submit" class="btn btn-large btn-primary">Save Profile</button>
-							</div>
-							<div data-ng-show="success" class="text-center text-success">
-								<strong>Profile Saved Successfully</strong>
-							</div>
-							<div data-ng-show="error" class="text-center text-danger">
-								<strong data-ng-bind="error"></strong>
-							</div>
-						</fieldset>
-					</form>
+								<div class="text-center form-group">
+									<button type="submit" class="btn btn-large btn-primary">Save Profile</button>
+								</div>
+								<div data-ng-show="success" class="text-center text-success">
+									<strong>Profile Saved Successfully</strong>
+								</div>
+								<div data-ng-show="error" class="text-center text-danger">
+									<strong data-ng-bind="error"></strong>
+								</div>
+
+							</fieldset>
+						</form>
+					</div>
+				</div>
+
+
+
+
+
+
+
+				<div ng-show="user.userType == 'business'">
+					<h3>Personal info</h3>
+
+					<div class="form-group">
+						<form name="userForm" data-ng-submit="updateUserProfile(userForm.$valid)" class="signin form-horizontal" autocomplete="off">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">User Type:</label>
+									<div class="col-lg-8">
+										<span data-ng-bind="user.userType"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">First name:</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" data-ng-model="user.firstName" placeholder="First Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Last name:</label>
+									<div class="col-lg-8">
+										<input class="form-control" type="text" data-ng-model="user.lastName" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Gender:</label>
+									<div class="col-lg-8">
+										<input type="text" id="gender" name="gender" class="form-control" data-ng-model="user.gender" placeholder="Male or Female">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Age:</label>
+									<div class="col-lg-8">
+										<input type="Number" id="age" name="age" class="form-control" data-ng-model="user.age" placeholder="Age">
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Email:</label>
+									<div class="col-lg-8">
+										<input class="form-control" id="email" type="email" name="email" data-ng-model="user.email" placeholder="Email">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Business Name:</label>
+									<div class="col-lg-8">
+										<input type="text" id="username" name="username" class="form-control" data-ng-model="user.username" placeholder="Business name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Street Address:</label>
+									<div class="col-lg-8">
+										<input type="text" id="street_one" name="street_one" class="form-control" data-ng-model="user.street_one" placeholder="Street Address">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">City:</label>
+									<div class="col-lg-8">
+										<input type="text" id="city" name="city" class="form-control" data-ng-model="user.city" placeholder="City">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">State:</label>
+									<div class="col-lg-8">
+										<input type="text" id="state" name="state" class="form-control" data-ng-model="user.state" placeholder="State">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Zip Code:</label>
+									<div class="col-lg-8">
+										<input type="text" id="zipcode" name="zipcode" class="form-control" data-ng-model="user.zipcode" placeholder="Zip Code">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Business Description:</label>
+									<div class="col-lg-8">
+										<input type="text" id="businessdescription" name="businessdescription" class="form-control" data-ng-model="user.descriptionOfBusiness" placeholder="Bar, Amphitheater, Restaurant, etc.....">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-lg-3 control-label">Business Owner:</label>
+									<div class="col-lg-8">
+										<input type="text" id="businessowner" name="businessowner" class="form-control" data-ng-model="user.ownerOfBusiness" placeholder="Owner's Name">
+									</div>
+								</div>
+								<div class="text-center form-group">
+									<button type="submit" class="btn btn-large btn-primary">Save Profile</button>
+								</div>
+								<div data-ng-show="success" class="text-center text-success">
+									<strong>Profile Saved Successfully</strong>
+								</div>
+								<div data-ng-show="error" class="text-center text-danger">
+									<strong data-ng-bind="error"></strong>
+								</div>
+							</fieldset>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
