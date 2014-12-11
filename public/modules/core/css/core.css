@@ -186,8 +186,8 @@
     100%  { left:0; }
 }
 .btn{
-  background-color:#78E69C;
-  border-color:#78E69C;
+  background-color:#78E6B4;
+  border-color:#78E6B4;
 }
 .btn:hover{
   background-color:#A0EEBA;
@@ -197,6 +197,14 @@ a{
   color:darkgray;
 }
 a:hover{
-  color:#78E69C;
+  color:#78E6B4;
 }
-
+.jumbotron{
+  background-image: url('http://i62.tinypic.com/343ll69.jpg');
+  background-size:cover;
+}
+.carousel_text{
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
