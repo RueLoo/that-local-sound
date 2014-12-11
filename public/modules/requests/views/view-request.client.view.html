@@ -1,21 +1,26 @@
 <section data-ng-controller="RequestsController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1 data-ng-bind="request.name"></h1>
+	<div class="col-md-12">
+		<form class="form-horizontal" data-ng-submit="update()" novalidate>
+			<fieldset>
+				<div class="form-group">
+					<h1>The event is on {{request.dateOfGig}}</h1>
+					<h2>Be at the venue for Rehersal at {{request.rehearsalTime}}</h2>
+					<h4>The time slot is {{request.startTime}} to {{request.endTime}}</h4>
+					<h4>The amount for the gig is {{request.amount}}</h4>
+				</div>
+				<div ng-if="authentication.user.userType == 'artist'">
+				<label for="Accept">Accept</label>
+				<input type="radio" id="hasAccepted" name="hasAccepted" value="true" data-ng-model="hasAccepted">
+				<label for="business">Decline</label>
+				<input type="radio" id="hasAccepted" name="hasAccepted" value="false" data-ng-model="hasAccepted">
+				<div class="form-group">
+					<input type="submit" value="Respond" class="btn btn-default">
+				</div>
+			</div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+			</fieldset>
+		</form>
 	</div>
-	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == request.user._id))">
-		<a class="btn btn-primary" href="/#!/requests/{{request._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="request.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="request.user.displayName"></span>
-		</em>
-	</small>
 </section>
