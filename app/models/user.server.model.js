@@ -66,6 +66,9 @@ var UserSchema = new Schema({
   gender:{
     type:String
   },
+  influences:{
+    type:String
+  },
   salt: {
     type: String
   },
@@ -146,11 +149,11 @@ var UserSchema = new Schema({
     type: Number,
   },
   genre: {
-    type: [String],
+    type: String,
     default: ''
   },
   instrumentsPlayed: {
-    type: [String],
+    type: String,
     default: ''
   },
   bio: {
