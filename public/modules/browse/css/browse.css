@@ -97,7 +97,7 @@ time, mark, audio, video {
                       color: #145266;
                       font-family: 'Dosis', sans-serif;
                     }
-		
+
 		    a:hover {
 		      color:#78E69C;
 		    }
@@ -117,7 +117,7 @@ time, mark, audio, video {
 
                     h3{
                       margin-top: 0;
-                      color: #78E69C;
+                      color: #333333;
                       line-height: 110%;
                       margin-bottom: 5px;
                     }

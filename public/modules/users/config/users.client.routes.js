@@ -45,6 +45,15 @@ angular.module('users').config(['$stateProvider','$urlRouterProvider',
 		state('dashboard', {
 			url: '/dashboard/',
 			templateUrl: 'modules/users/views/dashboard/dashboard.client.view.html'
+		}).
+		state('gigs', {
+			url: '/gigs/',
+			templateUrl: 'modules/users/views/dashboard/gigs.client.view.html'
+		}).
+		state('contact', {
+			url: '/contact/',
+			templateUrl: 'modules/users/views/dashboard/contacts.client.view.html'
 		});
+
 	}
 ]);
